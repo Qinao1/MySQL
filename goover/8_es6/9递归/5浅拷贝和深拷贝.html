@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    // 浅拷贝只是拷贝一层 更深层次对象 级别的只拷贝引用
+    // 深拷贝 拷贝多层  每一级别的数据 都会拷贝
+    var obj={
+        id:1,
+        name:'andy',
+        msg:{
+            age:18
+        }
+    };
+    var o={};
+    // for (var k in obj){
+    //     // k是属性名 obj[k]是属性值
+    //     o[k]=obj[k]
+    // }
+    // console.log(obj);
+    // console.log(o);
+    // o.msg.age=20;
+    // es6新增语法糖
+    // Object.assign(target,sourcea)前面是你要拷贝给谁，后面是拷贝谁  深层的也是只拷贝地址
+    console.log('------------------------------------------');
+    Object.assign(o,obj);
+    // o.msg.age=20;
+    console.log(o);
+    o.msg.age=20;
+    console.log(obj);
+
+    </script>
+</body>
+
+</html>

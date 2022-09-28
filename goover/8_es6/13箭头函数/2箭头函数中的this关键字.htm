@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    在传统的函数当中，是谁将函数调用起来的，函数中的this就指向谁 但是在箭头函数中就不拥有这个特性
+    因为在箭头函数中
+    箭头函数 不绑定this关键字 箭头函数中的this 指向的是函数定义位置 的上下文this
+    （箭头函数，没有自己的this）箭头函数被定义在哪，箭头函数中的this就指向哪
+    <script>
+        // const obj={name:'张三'};
+        // function fn(){
+        //     console.log(this);
+        //     return ()=>{
+        //         console.log(this);
+        //     }
+        // }
+        // const resfn=fn.call(obj);
+        // resfn();
+        // 箭头函数 不绑定this 箭头函数没有自己的this关键字 如果在箭头函数中 使用this
+        // this关键字 将指向箭头函数定义位置中的this
+        function fn() {
+            console.log(this);
+            return ()=>{
+                console.log(this);
+            }
+        }
+        const obj = { name: '张三' };
+       const res=fn.call(obj);
+    //    console.log(res);
+    res();
+    </script>
+</body>
+
+</html>

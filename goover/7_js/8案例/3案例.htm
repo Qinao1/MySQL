@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数可以调用另一个代码块
+        //因为每一个函数都是独立的代码块，用于完成特殊任务，因此经常会用到函数相互调用的情况
+        // function fn1(){
+        //     console.log(11);
+        //     fn2();
+        // }
+        // fn1();
+        // function fn2(){
+        //     console.log(22);
+        // }
+        function fn1 (){
+            console.log(111);
+            fn2();
+            console.log('fn1');
+        }
+        function fn2() {
+            console.log(222);
+            console.log('fn2');
+        }
+        fn1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

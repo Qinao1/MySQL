@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            border-radius: 10px;
+
+        }
+        .yuanxing {
+            height: 200px;
+            width: 200px;
+            /* border-radius: 100px; */
+            background-color: pink;
+            border-radius: 50%;
+            /* 百分之50就是宽度和高度的一半，等价于100px */
+        }
+        .juxing {
+            widows: 300px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50px;
+        }
+        .radius {
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 圆角边框原理 -->
+    <!-- 在css3中，新增了圆角边框样式，这样我们的盒子就能变圆角了 -->
+    <!-- 语法 -->
+    <!-- border-radius： length； -->
+    <!-- radius半径（圆的半径）原理，椭圆与边框的交集形成圆角效果 -->
+    <!-- 圆角边框属性 -->
+           <!-- 参数可以为数值或百分比的样式 -->
+           如果想设置一个圆形，把数值改为高度和宽度的一半即可，直接写50%
+           如果是一个矩形，设置为高度的一半就可以了
+           改属性是一个简写属性，可以跟4个属性，左上角，又上角，右下角，左下角,如果是两个值，是对角线的关系，左上，又下，右上，左下
+           分开写，border-top-left，border-top-right，border-botton-right，border-botton-left，按顺序写
+    <div></div>
+    <div class="yuanxing">圆角边框</div>
+    <div class="juxing">矩形</div>
+    <div class="radius">4个角</div>
+</body>
+</html>

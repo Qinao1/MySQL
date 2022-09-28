@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <!-- event对象代表事件的状态，跟事件相关的一系列信息的集合   现阶段主要学的的鼠标事件对象
+    MouseEvent和键盘事件对象keyboarEvent -->
+    <script>
+        
+        document.addEventListener('click',function(e){
+            // client返回的是鼠标在可视区的x和y坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log('---------------------------------');
+            // page鼠标在页面文档的x和y坐标
+            console.log(e.pageX);
+            console.log(e.pageY);
+            console.log('---------------------------------');
+            // screen  鼠标在电脑屏幕的x和y坐标
+            console.log(e.screenX);
+            console.log(e.screenY);
+        });
+
+    </script>
+</body>
+</html>

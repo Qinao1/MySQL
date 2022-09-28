@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 我们需要一个200*200的盒子，但是这个盒子有10px的红色边框 */
+        div {
+            width: 180px;
+            height: 180px;
+            background: pink;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 边框会额外增加盒子的大小，因此我们有两种方案解决 -->
+    <!-- 1测量盒子大小的时候不量外边框 -->
+    <!-- 2如果测量的时候包含了边框，则需要width|hrighth减去边框高度 -->
+    <div></div>
+</body>
+</html>

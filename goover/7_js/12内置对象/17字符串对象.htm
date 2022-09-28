@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //基本包装类型
+        // var str = 'andy';
+        // console.log(str.length);
+        // // 对象才有属性和方法  复杂数据类型 才有属性和方法
+        // // 简单数据类型为什么会有length属性
+        // // 基本包装类型   就是把简单数据类型  包装成为了复杂数据类型
+        // // 1把简单数据类型，包装为复杂数据类型
+        // var temp = new String('andy');
+        // // 2把临时变量给str
+        // str = temp;
+        // //销毁这个临时变量
+        // temp = null;
+        // 字符串的不可变性
+        //     var str = 'andy';
+        //     console.log(str);
+        //     str = 'red';
+        //     console.log(str);
+        //     // 因为字符串的不可变 不要大量的拼接字符串
+        //     var str = '';
+        //     for (var i = 1; i <= 100; i++) {
+        //         str += i;
+        //     }
+        //     console.log(str);
+        //    查找字符串“jsbasjahsashowowiqhwqw”中所有s出现的位置和次数
+        // var arr = 'jsbasjahsashowowijqhwqw';
+        // var index = arr.indexOf('j');
+        // var nu = 0;
+        // // console.log(index);
+        // while (index !== -1) {
+        //     console.log(index);
+        //     nu++;
+        //     index=arr.indexOf('j', index + 1);
+        // }
+        // console.log('j' + '出现的次数是' + nu);
+        //['red','blue','red','green','pink','red']求red出现的位置和次数
+        var color = ['red', 'blue', 'red', 'green', 'pink', 'red'];
+        var index = color.indexOf('red');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = color.indexOf('red', index + 1);
+
+        }
+        console.log(num);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

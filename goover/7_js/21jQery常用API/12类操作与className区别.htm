@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        .one {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+        .two {
+            transform: rotate(720deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 原生js中 className会覆盖元素原先里面的类名
+    jquery 里面类操作只是对指定类进行操作 不影响原先的类名 -->
+    <div class="one two"></div>
+    <script>
+        // var one=document.querySelector('.one');
+        // one.className="two";
+        // $(".one").addClass("two");  //这个addclass相当于追加类名 不影响以前的类名
+        $(".one").removeClass("two");
+    </script>
+</body>
+</html>

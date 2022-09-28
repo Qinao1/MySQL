@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 分时问候案例 -->
+    <!-- 根据不同时间  页面显示不同图片  显示不同问候语 -->
+    <img src="../liu.jpg" alt="" title="上午">
+    <div>上午好</div>
+    <script>
+        //获取元素
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        //注册事件   // 添加事件处理程序
+        // 得到当前的小时数
+        var date = new Date();
+        var h = date.getHours();
+        //判断小时数 改变文字和图片信息
+        if (h < 12) {
+            img.src = '../liu.jpg';
+            div.innerHTML = '上午好好写代码';
+            img.title = '上午';
+        } else if (h < 18) {
+            img.src = '../xai.jpg';
+            img.title = '下午';
+            div.innerHTML = '下午好好写代码';
+        } else {
+            img.src = '../zhang.jpg';
+            img.title = '晚上';
+            div.innerHTML = '晚上好好写代码';
+        }
+    </script>
+</body>
+
+</html>

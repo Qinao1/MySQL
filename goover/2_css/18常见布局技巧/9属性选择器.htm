@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 必须是input  但是同时具有value这个属性选择这个元素 */
+        /* input[value] {
+            color: pink;
+        } */
+        /* 只选择了type=text   文本框的input 选取出来 */
+        input[type=text] {
+            color: pink;
+        }
+        /* 选择首先是div 然后具有class属性，并且属性值必须是icon开头的这些元素 */
+        div[class^=icon] {
+            color: red;
+        }
+        section[class$=data] {
+            color: blue;
+        }
+        section[class*=te] {
+            color: skyblue;
+        }
+        /* 类选择器和属性选择器，伪类选择器权重都是10 */
+    </style>
+</head>
+<body>
+    <!-- 属性选择器可以根据元素特定属性的来选择元素，这样就可以不用借助于类或者id选择器 -->
+    <!-- <input type="text" value="qingshuru"> -->
+    <!-- <input type="text"> -->
+    <!-- 属性选择器还可以选择属性=值的某些元素!!!!!!!!!! -->
+    <input type="text">
+    <input type="password">
+    <!-- 属性选择器可以选择属性开头的某些元素 -->
+    <div class="icon1">qewewq</div>
+    <div class="icon4">qwewqe</div>
+    <div class="icon2">wqewq</div>
+    <div class="icon3">wqew</div>
+    <!-- 属性选择器可以选择属性属性值结尾的某些元素 -->
+    <section class="icon1-data">qwq</section>
+    <section class="icon1-data">qrqrq</section>
+    <section class="icon1-te">qrereqr</section>
+</body>
+</html>

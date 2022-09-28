@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //遍历对象
+        var obj={
+            name:'pink',
+            age:18,
+            sex:'男',
+            fn:function(){
+
+            }
+        }
+        console.log(obj.name);
+        console.log(obj['age']);
+        console.log(obj.sex);
+        // for in 遍历对象
+        // for （遍历in对象）{
+
+        // }
+        for (var k in obj){
+            console.log(k);//k变量，输出  得到的是属性名
+            console.log(obj[k]);//obj[k]  得到的是属性值
+        }
+        //使用for in 里面的变量 我们循环写 k 或者key
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

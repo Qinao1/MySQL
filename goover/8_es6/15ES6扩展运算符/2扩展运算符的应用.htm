@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    数组的扩展方法之扩展运算符（展开语法）
+    扩展运算符可以应用于合并数组
+    <script>
+        // 合并数组的方法1
+        let ary1=[1,2,3];
+        let ary2=[3,4,5];
+        let ary3=[...ary1,...ary2];
+        console.log(ary3);
+        // 方法2
+        ary1.push(...ary2);
+        console.log(ary1);
+    </script>
+    
+</body>
+</html>

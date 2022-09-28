@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 原生js获取元素的方式有很多种  很杂  而且兼容性不一致  因此  jquery给我们做了封装  使获取元素统一标准· -->
+    <!-- $("选择器")  里面直接写选择器即可  加引号 -->
+    <!-- 常见的选择器 -->
+    <!-- 
+    名称             用法                      描述
+    ID选择器         $("#id")                 获取指定ID的元素
+    全选选择器       $("*")                   匹配所有元素
+    类选择器         $("class")               获取同一类class的元素  
+    标签选择器       $("div")                 获取同一类标签的所有元素
+    并集选择器       ${("div,p,li")           选取多个元素
+    交集选择器       $(li.current")           交集元素 
+    -->
+
+    <div>我是div</div>
+    <div class="nav">我是nav div</div>
+    <p>我是p</p>
+    <ol>
+        <li>我是ol 的</li>
+        <li>我是ol 的</li>
+        <li>我是ol 的</li>
+        <li>我是ol 的</li>
+    </ol>
+    <ul>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+    </ul>
+    <script>
+        $(function(){
+            // $(".nav")
+            console.log($("nav"));
+            console.log($("ul li")); //后代选择器 使用空格  代表后代选择器   获取 ul下的所有li元素 包括孙子等
+            console.log($("ul>li"));//子代选择器  获取的是亲儿子层级元素   注意并不会获取孙子层级的元素
+        })
+    </script>
+</body>
+</html>

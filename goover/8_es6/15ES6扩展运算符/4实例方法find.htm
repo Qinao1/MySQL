@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1 实例方法 find() 用于找出 第一个符合条件的数组成员 如果没有找到，返回undefined
+    2 实例方法 findIndex() 用于找出第一个符合条件的数组成员 位置！ 如果没有找到，返回-1
+    <script>
+        // 1find()
+        let ary = [{
+            id: 1,
+            name: '张三'
+        }, {
+            id: 2,
+            name: '李四'
+        }];
+        let arr = ary.find((item, index) => item.id == 27); //index 没用到，可以省略
+        console.log(arr);
+
+        // 2 findIndex()
+        let arr1 = [1, 3, 4, 5, 7, 9];
+        let index = arr1.findIndex((value, index) => value > 7);
+        // index 用不到可以省略
+        console.log(index);
+    </script>
+</body>
+
+</html>

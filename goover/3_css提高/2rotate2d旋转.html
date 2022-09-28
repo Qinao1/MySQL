@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: rotate(45deg); */
+            transition: all 1s;
+            /* transform-origin: left bottom; 默认的50% 50% center center*/
+            transform-origin: 50px 50px;
+           
+        }
+        div:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- transform : rotate（度数）单位是deg eg：transform：rotate（45deg）
+    trnasform-origin  2d转换中心点
+    transform-origin：x 空格y;  xy默认转换中心是元素的中心点（50% 50%)也可以跟方位名词
+    -->
+    <!-- 默认旋转中心是元素的中心 -->
+    <div></div>
+</body>
+</html>

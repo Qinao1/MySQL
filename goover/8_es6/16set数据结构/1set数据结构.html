@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ES6提供了新的数据结构 Set 它类似于数组 但是成员的值 都是唯一的 没有重复的值
+    set 是一种数据结构 数组对象都是数据结构中的一种 作用都是用来存储数据的
+    set 类似于数组 也是一组数据的集合 它和数组最大的区别是set数据结构 不会存储重复的值
+    set 常用在搜索功能 搜索关键字的存储 就可以用set关键字
+    因为搜索历史关键字 不能有重复的值 而用户是完全有可能 输入相同的搜索关键
+    用set存储值 ，内部会自动判断 值是否重复 如果重复 则不会存储
+
+    如果创建set数据结构
+    set本身是一个构造函数 用来生成Set数据结构 创建此构造函数的实例对象 就是在创建set数据结构了
+    <script>
+        const s = new Set();
+        // 在创建set数据结构的时候 也可以 初始化一些数据进去
+        // set函数可以接受 一个数组作为参数 用来初始化
+        // 数组中的值 会被自动存储在set数据结构中
+        // const set=new Set([1,2,3,3,4,5]);
+
+      const s1=new Set();  //用new创建Set 关键字的实例   
+    //   在实例对象下面 有一个属性叫做sise  size就代表在当前这个数据结构当中包含了多少值
+    console.log(s1.size); 
+    const s2=new Set(['a','b','1']);
+    console.log(s2.size);
+
+    // 利用set数据结构做数组去重
+    const s3=new Set(['a','a','b','b']);
+    console.log(s3.size);  //结果是2  当我们传递初始值的时候 它会把重复的值 过滤掉  利用这一点就可以做数组去重了
+
+    // 我们可以利用扩展运算符 将set数据结构，转换成 以逗号分隔的参数序列（零散量）
+   let ary= [...s3];
+   console.log(ary);
+    </script>
+</body>
+
+</html>

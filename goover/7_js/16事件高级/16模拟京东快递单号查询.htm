@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .search {
+            position: relative;
+            width: 200px;
+            height: 60px;
+            margin: 100px 0px 0px 100px;
+        }
+
+        .con {
+            display: none;
+            overflow: hidden;
+            position: relative;
+            width: 180px;
+            height: 25px;
+            line-height: 25px;
+            font-size: large;
+            border: 1px solid #dadcd9;
+            border-bottom: 0;
+            box-shadow: -1px 2px 6px #dddfdc;
+        }
+
+        .con::before {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            content: '';
+            border-top: 5px solid #fdfffc;
+            border-right: 5px solid transparent;
+            /* border-bottom: 10px solid green ; */
+            border-left: 5px solid transparent;
+        }
+
+        .jd {
+            position: absolute;
+            top: 34px;
+            left: 0px;
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 要求，当我们在文本框输入内容时，文本框上面自动显示大字号内容 -->
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入你的快递单号" class="jd">
+    </div>
+    <script>
+        var con = document.querySelector('.con');
+        var jd_input = document.querySelector('.jd');
+        jd_input.addEventListener('keyup', function () {
+            // console.log('输入内容了');
+            if (this.value == '') {
+                con.style.display = 'none';
+            } else {
+                con.style.display = 'block';
+                con.innerHTML = this.value;
+            }
+        })
+        // 注意keydown和keypress在文本框里面的特点  他俩事件触发的时候，文字还没有落入文本框中
+        // keyup事件触发时，文本已经落入里面了
+        // 、当我们失去焦点就隐藏这个con盒子
+        jd_input.addEventListener('blur', function () {
+            con.style.display = 'none';
+        })
+        // 获得焦点显示con盒子
+        jd_input.addEventListener('focus', function () {
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        })
+
+    </script>
+</body>
+
+</html>

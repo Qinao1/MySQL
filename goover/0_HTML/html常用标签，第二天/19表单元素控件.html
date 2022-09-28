@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单元素控件</title>
+</head>
+<body>
+    <form>
+        input表单元素。
+           <!-- text  文本框 用户可以在里面输入任何文字 -->
+           用户名：<input type="text" name="2" value="请输入用户名" maxlength="3">    <br>
+           <!-- password，密码框  用户看不见输入密码-->
+           密码：<input type="password" name="1" maxlength="6"><br>
+           <!-- radio  单选按钮   可以实现多选    如果要实现单选按钮要将每一个按钮的  name  设置为相同的 -->
+           性别  男<input type="radio" name="1" value="男" checked="checked">  
+           女<input type="radio" name="1" value="女">
+           人<input type="radio" name="1" value="人" checked="checked"><br>
+           <!-- 单选按钮和复选框可以设置checked属性。当页面打开的时候就可以默认选中这个按钮.单选框只能设置一个
+        复选框可以设置多个 -->
+           <!-- checkbox  复选框  可以实现多选效果 -->
+           爱好：吃饭<input type="checkbox" name="3" value="吃饭" checked="checked">
+           睡觉<input type="checkbox" name="3" value="睡觉">
+           打豆豆<input type="checkbox" name="3" value="打豆豆"><br>
+           <!-- name元素是每一个表单元素自己的名字。
+              除type属性外。input标签还有很多属性其常用属性如下
+              name  由用户自定义   定义input元素的名称
+              value 由用户自定义   规定input元素的值
+              checked  checked     规定input元素首次加载时应当被选中
+              maxlength  正整数    规定输入字段中的字符最大长度       max是最大length是长度。
+              name和value是每一个表单元素都有的属性。主要给后台人员使用
+              name表单元素的名字。要求  单选按钮和复选框要有相同的name值
+              hcecked属性主要针对单选框和复选框。主要作用就是一打开页面就可以选中某个表单元素。
+              maxlength是用户可以在表单元素输入的最大字符数。一般较少使用
+
+        -->
+        <!-- submit是提交按钮，也是登录按钮。可以把表单域form    里面的表单元素  里面的值  提交给后台服务器 -->
+          <input type="submit" value="提交按钮"><br>
+          <!-- 默认显示提交俩字 -->  
+          <!-- reset是重置按钮。 重置按钮可以还原表单元素的初始的默认！  状态 -->
+          <input type="reset" value="重置按钮"><br>
+             <!-- 定义可点击按钮（多数情况下，用于通过JavaScript启动脚本） -->
+             <!-- 普通按钮 button 后期结合js 搭配使用 -->
+          <input type="button" value="获取验证码"><br>
+          <!-- 文件域   file    使用场景  上传文件用的 -->
+         上传头像： <input type="file">
+    </form>
+
+    <!-- 表单控件（表单元素）
+
+         在表单域中可以定义各种表单元素。这些表单元素就是允许用户在表单中输入或者选择的内容控件
+         input  输入  表单元素       这是单标签
+         input就是输入。在表单元素中《inpute》标签用于收集用户信息
+         在input标签中包含一个type属性。根据不同的type属性值，能设置不同的效果
+         
+         输入字段拥有很多形式（可以是文本字段，复选框，掩码后的文本控件，单选按钮，按钮等）
+         eg：<input type="属性值">这是单标签 
+
+
+         selet下拉表单元素
+         text文本域元素 -->
+</body>
+</html>

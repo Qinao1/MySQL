@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dj {
+            position: fixed;
+            top:100px;
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dj"><img src="../素材/touming.jpg" alt=""></div>
+    <!-- 固定定位的特点，
+    1以浏览器的可视窗口为参照点移动元素
+    跟父元素没有关系，不随滚动条滚动
+    2固定定位不再占有原先的位置，
+    固定定位也是脱标的，其实固定定位也可以看做是一种特殊的绝对定位 -->
+    <!-- 固定定位小技巧
+    固定在版心的右侧位置
+    1让固定定位的位置left：50%走到浏览器可视区（也可以看做版心）的一半位置
+    2让固定定位的位置margin-left：版心宽度一半的距离，多走版心宽度的一半位置
+    有粘性定位sticky
+    选择器{position：sticky top：40px}
+    粘性定位占有原先的位置
+    必须添加top
+    left，botton，right其中的一个才有效，兼容性较差，IE不支持
+    、
+
+    定位叠放次序
+    z-index
+    语法
+    选择器{
+        z-index：1；
+    }
+    数值可以是正整数，负整数，或0，默认是auto，数值越大，盒子越靠上
+    如果属性相同，按照书写顺序，后来者居上
+    数字后面不能加单位
+    只有定位的盒子才有z-index属性
+    -->
+</body>
+</html>

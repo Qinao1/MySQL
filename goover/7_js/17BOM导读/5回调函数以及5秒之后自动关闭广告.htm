@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            list-style: none;
+        }
+
+        .ju {
+            position: relative;
+            display: flex;
+            width: 200px;
+            height: 590px;
+            background-color: pink;
+            flex-flow: column nowrap;
+
+        }
+
+        .head {
+            width: 100%;
+            height: 100px;
+            background-color: red;
+
+        }
+
+        .t_body::after {
+            content: "";
+            position: absolute;
+            top: 600px;
+            left: 0;
+            display: block;
+            width: 200px;
+            height: 10px;
+            background-size: 20px 10px;
+            background-image: radial-gradient(circle at bottom, #fe415f 10px, transparent 0);
+        }
+
+        .goods {
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .life-exchange {
+            width: 100%;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- setTimeout()这个调用函数，我们也称为回调函数callback
+    普通代码是按照代码顺序，直接调用
+    而这个函数   需要等待时间  时间到了才去调用这个函数  因此称为回调函数
+    简单理解   回调  就是回头调用的意思，上一件事干完   再回头调用这个函数
+    以前讲的  element.onclick=function（）{}或者element.adddEventListener('click',function(){})；里面的函数也是回调函数 -->
+    <div class="ju">
+        <div class="head"></div>
+        <div class="t_body">
+            <div class="goods"></div>
+            <div class="life-exchange"></div>
+        </div>
+    </div>
+    <script>
+        var ju=document.querySelector('.ju');
+        setTimeout(function(){
+            ju.style.display='none';
+        },5000)
+    </script>
+</body>
+
+</html>

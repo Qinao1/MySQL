@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box1 {
+            text-align: center;
+        }
+        .box1 a {
+            display: inline-block;
+            width: 26px;
+            height: 36px;
+            background-color: pink;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 36px;
+            text-decoration: none;
+            color: #333;
+        }
+        .box1 .prev,
+        .box1 .next {
+            width: 85px;
+        }
+        .box1 .current,
+        .box1 .elp {
+            background: #fcfcfc;
+            border: none;
+        }
+        .box1 input {
+            height: 36px;
+            width: 45px;
+            border: 1px solid #000;
+            outline: none;
+        }
+        .box1 button {
+            width: 60px;
+            height: 36px;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#" class="current">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="elp">...</a>
+        <a href="#" class="next">&gt;&gt;下一页</a>
+        到第
+        <input type="text">
+        页
+        <button>确定</button>
+    </div>
+</body>
+</html>

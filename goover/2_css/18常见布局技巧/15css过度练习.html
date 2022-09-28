@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 300px;
+            /* padding: 14px; */
+            /* background-color: pink; */
+            margin: 15px auto;
+        }
+        .box5 {
+            padding: 10px;
+        }
+           
+        div .title {
+            font-size: 14px;
+            font-weight: 400;
+
+        }
+
+        div .price,
+        .yishou,
+        .number {
+            color: red;
+        }
+
+        div .normo {
+            text-decoration: line-through;
+            font-size: 10px;
+            color: #ccc;
+        }
+
+        .back,
+        .yishou,
+        .jindu,
+        .sheng {
+            font-size: 10px;
+        }
+
+        .box4 {
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+
+        .jindu {
+            width: 53px;
+            height: 10px;
+            /* background-color: red; */
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+
+        .jindu .tiao {
+            display: block;
+            background-color: red;
+            width: 30px;
+            height: 10px;
+            transition: width 1s;
+            
+        }
+
+        .tiao:hover {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box5">
+            <div class="box2"><img src="../xiaomi.jpg" alt=""></div>
+            <p class="title">apple苹果沙发好好玩癌雷诺兹是安利</p>
+            <span class="price">￥6099</span><span class="normo">￥3000</span>
+            <div class="box3">
+                <span class="back">已售</span>
+                <span class="yishou">87%</span>
+                <span class="jindu">
+                    <span class="tiao"></span>
+                </span>
+                <span class="sheng">剩余<span class="number">29</span>件</span>
+            </div>
+        </div>
+        <div class="box4">立即抢购</div>
+    </div>
+</body>
+
+</html>

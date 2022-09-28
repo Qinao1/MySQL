@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- document.createElement('tagName');    的方法由tagName指定的html元素   因为这些元素原先不存在
+    是根据我们的需求动态生成的   所以也称为  动态创建节点 -->
+    <ul>
+        <li>
+            123
+        </li>
+    </ul>
+    <script>
+        //创建节点
+        var li = document.createElement('li');
+        //添加节点     node.appendChild(child);  node是父级   child是子级  后面追加元素  类似数组的push  
+        var ul = document.querySelector('ul');
+        ul.appendChild(li);
+        // 添加节点    node.insertbefore(child,指定元素)；
+        var lili=document.createElement('li');
+        ul.insertBefore(lili,ul.children[0]);
+        //我们页面中想要添加一个新的元素    1创建元素  2添加元素
+    </script>
+</body>
+
+</html>

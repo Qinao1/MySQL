@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    以对象形式存在
+    创建正则表达式
+    在JavaScript中 可以通过两种方式 创建一个正则表达式
+    通过调用 RegExp 对象的构造函数创建
+    <script>
+        // 正则表达式 在js中的使用
+
+        // 1利用RegExp 对象来创建 正则表达式
+        // var regexp=new RegExp(/表达式/);必须输入的是123 这些数字
+        var regexp=new RegExp(/123/);
+        console.log(regexp);
+        // 2利用字面量 创建正则表达式
+        // var 变量名 =/表达式/
+        var rg=/123/;
+
+        // 测试正则表达式  test  检测
+        // test()正则对象方法 用于检测 字符串是否符合该规则  该对象会返回true 或false 其参数就是测试字符串
+        // 符合true 不符合false
+        // 正则表达式.test(检测的文本)
+        // test()方法用于检测字符串是否符合正则表达式要求的规范
+        console.log(rg.test(123));
+        console.log(rg.test('abc'));
+
+    </script>
+</body>
+</html>

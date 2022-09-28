@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- es6之前，用arguments -->
+    <!-- 剩余参数    当函数实参个数  大于形参个数时 我们可以将剩余实参放到一个数组中 -->
+    <script>
+        // function sum(first,...args){//三个点代表，剩余的实参它都接收了  args形参，是一个数组 数组中，存储了，20和30
+        //     console.log(first);//10
+        //     console.log(args);//[20,30]
+        // }
+        // sum(10,20,30);
+        const sum = (...args) => {
+            let total = 0;
+            args.forEach(item => total += item)
+            return total;
+        };
+        console.log(sum(10, 20));
+        console.log(sum(10, 20, 30));
+    </script>
+</body>
+
+</html>

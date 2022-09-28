@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 向对象中添加方法 up down
+        let game={
+
+        }
+        
+        //声明一个对象
+       /*  let methods={
+            up:Symbol(),
+            down:Symbol()
+        }
+        game[methods.up]=function(){
+            console.log('我可以改变行政');
+        }
+        game[methods.down]=function(){
+            console.log('我可以卡的黄金三');
+        }
+        console.log(game); */
+        let youxi={
+            name:'狼人啥',
+            [Symbol('say')]:function(){
+                console.log('我可以发言');
+            },
+            [Symbol('自爆')]:function(){  //里面那是注释
+                console.log('我可以自爆');
+            }
+        }
+        console.log(youxi);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重复请求问题</title>
+</head>
+
+<body>
+    <button>点击发送</button>
+  <!-- 如何第二次点的时候，能够把上一个没有完成·的请求取消掉  加一个判断 一个标识变量 -->
+    <script>
+        const btn = document.querySelectorAll('button');
+        let x = null;
+        //标识变量
+        let isSending=false;//是否正在发送AJAX请求 false标识没发 true表示正在发送
+        btn[0].onclick = function () {
+            // 判断标识变量
+            if (isSending)x.abort();//如果正在发送 则取消该请求 创建一个新的请求
+            x = new XMLHttpRequest();
+            // 修改标识变量的值  这个值声明时候变为false 当请求在完成后，还原成false
+            isSending=true;
+            x.open('GET', 'http://127.0.0.1:8000/delay');
+            x.send();
+            x.onreadystatechange=function(){
+                if(x.readyState===4){
+                    // 修改标识变量
+                    isSending=false;
+                }
+            }
+        }
+        //abort 这个abort方法属于ajax对象的x  取消请求
+        // btn[1].onclick = function () {
+        //     x.abort();
+        // }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数返回值注意事项
+        // 1，return终止函数
+        function getSum(num1,num2) {
+            return num1+num2;
+            alert('我是不会被执行');//return后面的代码不会被执行，有终止函数作用
+        }
+        console.log(getSum(1,2));
+        // return只能返回一个值 如果用逗号隔开，以最后一个为准
+        function fn(num1,num2) {
+            return num1,num2;//返回的结果是最后一个值
+        }
+        console.log(fn(1,4));
+
+        // 我们求任意两个数的加减乘除结果
+        function getRuselt(num1,num2) {
+            return [num1+num2,num1-num2,num1*num2,num1/num2]
+        }
+        var re=getRuselt(1,2);//返回的是一个数组
+        console.log(re);
+        // 函数，如果有return 则返回的是return后面的值，如果函数没有return则返回的是undefined
+        function fun1() {
+            return 664;
+        }
+        console.log(fun1());
+        function fun2() {
+            
+        }
+        console.log(fun2());//函数没有return，返回的结果是undefined
+        // break  结束当前的循环体（如for  ，while）
+        // continue ：跳出本次循环，继续执行下次循环（如for  while）
+        // return   不仅可以退出循环，还能够返回return语句中的值，同时还可以结束当前的函数体内的代码
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

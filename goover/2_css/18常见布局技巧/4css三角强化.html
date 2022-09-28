@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 0;
+            height: 0;
+            /* border-top: 100px solid transparent;
+            border-right: 50px solid red;
+            border-bottom: 0px solid pink;
+            border-left: 0px solid green; */
+            border-color: transparent pink transparent transparent;
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+        .price {
+            
+            width: 160px;
+            height: 24px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            
+        }
+        .price .miaosha {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+        .miaosha i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 24px 12px 0 0;
+        }
+        .origin {
+            font-size: 15px;
+            color: gray;
+            text-decoration: line-through;
+            font-weight: 400;
+            text-align: center;
+        }
+        .box1 {
+            width: 0;
+            height: 0;
+            margin-left: 100px;
+            border-color: red pink green skyblue;
+            border-style: solid;
+            border-width: 12px 12px 12px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="price">
+        <span class="miaosha">$5000
+            <i></i>
+        </span>
+        <span class="origin">$7698</span>
+        
+    </div>
+    <div class="box1">wewq</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande",Verdana,"Microsoft Yahei";
+    color: #000;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+/* 搜索模块 */
+.search-index {
+    display: flex;
+    /* 固定定位跟父级没有关系，它以屏幕为准 */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translate(-50%);
+    /* 固定的盒子必须有宽度 */
+    width: 100%;
+    min-width: 320px;
+    max-width: 540px;
+    height: 44px;
+    background-color: pink;
+}
+.search {
+    flex: 1;
+}
+.user {
+    width: 44px;
+    height: 44px;
+    background-color: purple;
+}

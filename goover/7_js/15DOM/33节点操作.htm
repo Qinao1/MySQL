@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 节点优点 -->
+    <!-- 一般情况下 节点 至少拥有nodeType（节点类型）  nodeName（节点名称）  和nodeValue（节点值）这三个基本属性 -->
+    <!-- 元素节点  nodetype为1 -->
+    <!-- 属性节点  nodetype为2 -->
+    <!-- 文本节点   nodetype为3（文本节点包括文字，空格  换行） -->
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <div class="box">
+        <div class="erweima">x</div>
+    </div>
+    <script>
+        var box=document.querySelector('.box');
+        console.dir(box);
+    </script>
+</body>
+</html>

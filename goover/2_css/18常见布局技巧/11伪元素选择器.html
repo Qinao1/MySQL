@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        div::before {
+            这是行内元素
+            display: inline-block;
+            这个content是必须要写的
+            content: '我';
+            width: 30px;
+            height: 40px;
+            background-color: red;
+
+        }
+
+        div::after {
+            content: '是';
+        } */
+        /* div {
+            position: relative;
+            width: 200px;
+            height: 40px;
+            border: 1px solid pink;
+        }
+        div::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            content: '>';
+            color: red;
+            font-size: 18px;
+        } */
+        div {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: pink;
+        }
+        div img {
+            width: 100%;
+            height: 100%;
+        }
+        div::before {
+            display: none;
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0, .3);
+        }
+        div:hover::before {
+            /* 这是显示元素 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 伪元素选择器可以帮助我们利用css创建新标签元素，而不需要html标签，从而简化html结构
+    ：：before   在元素内部的前面插入内容
+    ：：after     在元素内部的后面插入内容
+    ！！！！！！
+    before和after创建一个元素，但是属于行内元素
+    新创建的这个元素在文档中是找不到的，所以我们称为伪元素
+    语法   element：：{}
+    before和after必须有content属性
+    before在父元素内容的前面创建元素，after在父元素内容的后面插入元素
+    伪元素选择器和标签选择器一样，权重为1 -->
+    <!-- <div>isrewr</div> -->
+    <!-- 伪元素选择器使用场景1伪元素图标 -->
+    <!-- <div></div> -->
+    <div>
+        <img src="../tudou.png" alt="">
+    </div>
+</body>
+
+</html>

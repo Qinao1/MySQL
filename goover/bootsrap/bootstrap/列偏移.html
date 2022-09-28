@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .row div {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用ovl-md-offset -类  可以将列向右偏移为当前元素增加了左侧边距  -->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">左侧</div>
+        <div class="col-md-4 col-md-offset-4">右侧</div>
+    </div>
+    <div class="row">
+        <!-- 如果只有一个盒子，(12-8)/2 -->
+        <div class="col-md-8 col-md-offset-2">中间盒子</div>
+        
+    </div>
+    </div>
+</body>
+</html>

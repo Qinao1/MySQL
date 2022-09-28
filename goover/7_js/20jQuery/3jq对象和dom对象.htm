@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 原生js获取过来的对象  就是DOM对象
+    jQuery方法获取的元素就是jQuery对象
+    jQuery 对象本质是 利用$ 对dom对象包装后 产生的对象（伪数组形式储存）
+    -->
+    <div></div>
+    <span></span>
+    <script>
+        // 1dom对象   用原生js获取过来的对象就是dom对象
+        var myDiv=document.querySelector('div');  //myDiv 是DOM对象
+        var mySpan=document.querySelector('span'); //  mySpan是DOM对象
+        console.dir(myDiv);
+        // jquery对象    用 jQuery方法获取过来的对象就是jQuery对象  本质 通过$把dom元素进行了包装   
+        $('div');  // $('div'); 是一个jQuery对象
+        console.dir($('div'));
+        $('span');//  $('span'); 是一个jQuery对象
+        // jQuery对象只能使用 jQuery方法   DOM对象则使用原生的JavaScriot属性方法
+        // myDiv.style.display='none';
+        // myDiv.hide(); myDiv是一个DOm对象 不能使用 jQuery里面的hide方法
+        // $('div').style.display='none';这个$('div')是一个jQuery对象  不能使用原生js的属性和方法
+
+
+    </script>
+</body>
+</html>

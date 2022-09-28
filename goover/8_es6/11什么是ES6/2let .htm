@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    let es6中，新增的用于声明变量的关键字
+    特点
+    1 let声明的变量 只在所处于的块级有效 具有块级作用域
+    var 是全局 作用域 与局部作用域
+    实际上就去是一对大括号产生的作用域 只能在块级作用域中访问
+    块级作用域的好处是在业务逻辑比较复杂的时候能够防止内层变量覆盖外层变量
+    2不存在变量提升
+    3暂时性死区  特性
+    <!-- <script>
+        function fn(){
+            let num=10;
+            return function (){
+                console.log(num);
+            }
+        }
+       var f= fn();
+       f();
+    </script> -->
+    <script type="text/javascript">
+        // let 关键字就是用来声明变量的 使用let关键字声明的变量，具有块级作用域
+        // 在一个大括号中 使用let关键字声明的变量，才具有块级作用域 var关键字是不具备这个特点的
+        // 防止循环变量，变成全局变量
+
+        // let num=10;
+        // console.log(num);
+        // if (true){
+        //     let a=20;
+        //     console.log(a);
+        //     if(true){
+        //         let c=30;
+
+        //     }
+        //     console.log(c);
+        // }
+        // console.log(a);
+        // 使用 let 关键字声明的变量 才具有块级作用域 使用var声明的变量，不具有块级作用域的特性
+        // if (true){
+        //     let num=100;
+        //     var abc=200;
+        // }
+        // console.log(abc);
+        // console.log(num);
+
+        /*--------------------防止循环变量 变成全局变量----------*/
+        // for (let i = 0; i < 2; i++) {
+
+        // }
+        // console.log(i);//2 只有2的时候才不成立
+
+        /*-------------- 使用let 声明的变量。没有变量提升-------------*/
+        // console.log(a);
+        // var a=100;
+
+        /*---------使用let关键字声明的变量 具有暂时性死区特性-----------*/
+        var num=10;
+        if (true){
+            console.log(num);
+            let num=20;
+            // 在这个块级作用域声明了这个num变量 那么这个num变量，就和这个块级整体进行了绑定
+            // 在当前这个区域当中使用num 与外部是没有关系的
+        }
+    </script>
+</body>
+
+</html>

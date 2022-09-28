@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+			}
+			.clearfix{
+				clear: both;
+			}
+			/*导航*/
+		  .top{
+		  	max-width:1920px ;
+		  	border: 1px solid red;
+		  }	
+		  .top_keshi{
+		  	max-width: 1200px;
+		  	border: 1px solid darkblue;
+		  	margin: 0 auto;
+		  }
+		  .top_logo{
+		  	float: left;
+		  }
+		  .top_logo img{
+		  	margin-top: 16px;
+		  }
+		  .top_shouye{
+		  	float: left;
+		  }
+		  .top_shouye li{
+		  	float: left;
+		  	margin: 0 18px;
+		  }
+		  .top_shouye li a{
+		  	/*text-decoration: none;*/
+		  	color: #333333;
+		  	font-size: 14px;
+		  	line-height: 70px;
+		  }
+		  .top_shouye li a:hover{
+		   	color: red;
+		   }
+		  .top_right{
+		  	float: right;
+		  }
+		  .top_login{
+		  	border: 1px solid red;
+		  	background-image:url(images/top_tu2.png);
+		  	background-repeat: no-repeat;
+		  	background-position:6% bottom;
+		  	padding-left: 12px;
+		  }
+		  .top_login li{
+		  	float: left;
+		  	margin: 0 18px;
+		  	margin-top: 30px;
+		  
+		  }
+		  .top_login li a{
+		  	font-size:14px ;
+		  }
+		  .gonggao{
+		  	border: 1px solid red;
+		  	position: absolute;
+		  	right: 0;
+		  	top: 170px;
+		  }
+		  /*banner*/
+		  .banner_keshi img{
+		  	width: 100%;
+		  	display: block;
+		  }
+		 .banner{
+		 	border: 1px solid red;
+		 	position: relative;
+		 }
+		 .banner_keshi{
+		 	border: 1px solid  darkgoldenrod;
+		 	max-width: 1920px;
+		 }
+		.nav{
+			border: 1px  solid darkblue;
+		}
+		 /*运单追踪*/
+		.yundan{
+			border: 1px solid darkblue;
+			max-width: 1920px;
+			background-color: #dc1e32;
+			line-height: 98px;
+		}
+		.yundan_keshi{
+		border: 1px solid  darkgoldenrod;
+		max-width: 1200px;
+		margin: 0 auto;
+		
+		}
+		.yundan_keshi li{
+			float: left;
+			width: calc(100% / 5 - 78px);
+			position: relative;
+			padding-left: 40px;
+			margin: 48px 0;
+		}
+		.yundan_keshi li img{
+			position: absolute;
+			left:2px ;
+			top: -8px;
+			
+		}
+		.yundan_keshi li a{
+			color: #fffafb;
+			border-right: 1px solid  white;
+			display: block;
+			line-height: 16px;
+			width: 100px;
+			padding-right: 20px;
+		}
+		/*顺丰服务介绍*/
+		.fuwu_keshi{
+			max-width:1200px ;
+			margin: 0 auto;
+		}
+		.fuwu_keshi h1{
+			text-align: center;
+			line-height: 160px;
+		}
+		/*快递服务*/
+		.kuaidi{
+			border-bottom: 1px solid red;
+			padding-bottom: 20px;
+		}
+		.kuaidi_keshi{
+			max-width:1200px ;
+			/*border: 1px solid darkblue;*/
+			margin: 0 auto;
+		}
+		.kuaidi_keshi li{
+			float:left;
+			width: calc(100% / 5 - 10px);
+
+		}
+		/*顺丰特快*/
+		.tekuai{
+		/*	width: 1920px;
+			border: 1px solid darkblue;*/
+		}
+		.tekuai_keshi{
+			max-width: 1200px;
+			border: 1px solid  darkgoldenrod;
+			margin: 0 auto;
+		}
+		.tekuai_lie{
+			border: 1px solid  darkgoldenrod;
+			float: left;
+			width: calc(100% / 2 - 56px);
+			margin: 0 26px;
+		}
+		.tekuai_lie img{
+			width: 100%;
+		}
+		.tekuai_lie .sf{
+			border: 1px solid  darkgoldenrod;
+		}
+		.tekuai_lie .sf span{
+			border: 1px solid  darkgoldenrod;
+			display: inline-block;/*内联块*/
+			width: 460px;
+			text-align: right;
+			color: #AAAAAA;
+		}
+		</style>
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="top">
+			<div class="top_keshi">
+				<div class="top_logo">
+					<img src="images/sf.png"/>
+				</div>
+				<ul class="top_shouye">
+					<li><a href="">首页</a></li>
+					<li><a href="">物流服务</a></li>
+					<li><a href="">智慧科技</a></li>
+					<li><a href="">服务支持</a></li>
+					<li><a href="">可持续发展</a></li>
+					<li><a href="">投资者关系</a></li>
+					<li><a href="">关于我们</a></li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="top_right">
+					<ul class="top_login">
+						<li><a href=""><a href="">快速登录/注册</a></li>
+						<li><a href=""><img src="images/top_qi.png"></a></li>
+					    <div class="clearfix"></div>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!--banner-->
+		<div class="banner">
+			<div class="banner_keshi">
+				<img src="images/banner5.jpg" />
+			</div>
+			<div class="gonggao">
+				<dl class="fuwu">
+					<dt><img src="images/fuwugonggao.png"></dt>
+				</dl>
+				<dl class="wenti">
+					<dt><img src="images/wentifankui.png"></dt>
+				</dl>
+			</div>
+		</div>
+		<!--运单追踪-->
+		<div class="yundan">
+			<div class="yundan_keshi">
+				<ul>
+					<li><a href=""><img src="images/nav (1).png" alt="" >运单追踪</a></li>
+					<li><a href=""><img src="images/nav (2).png" alt="">我要寄件</a></li>
+					<li><a href=""><img src="images/nav (3).png" alt="">运费时效查询</a></li>
+					<li><a href=""><img src="images/nav (4).png" alt="">服务网点查询</a></li>
+					<li><a href=""><img src="images/nav (5).png" alt="">收寄范围查询</a></li>
+				     <div class="clearfix"></div>
+				</ul>
+			</div>
+		</div>
+		<!--顺丰服务介绍-->
+		<div class="fuwu">
+			<div class="fuwu_keshi">
+				<h1>物流服务介绍</h1>
+			</div>
+		</div>
+		<div class="kuaidi">
+				<ul class="kuaidi_keshi">
+				 <li>快递服务</li>
+				  <li>快运服务</li>
+				  <li>冷运服务</li>
+				  <li>医药服务</li>
+				  <li>国际服务</li>
+				  <div class="clearfix"></div>
+				</ul>
+		</div>
+	     <!--顺丰特快-->
+	     <div class="tekuai">
+	     	<div class="tekuai_keshi">
+	     		<div class="tekuai_lie">
+	     			<div><img src="images/shunfengtekuai.png"/></div>
+	     			<div class="sf">顺丰特快<span>></span></div>
+	     			<div class="zhunshi">
+	     				顺丰为客户提供的“快速、准时、稳定、安全”的高品质、门到门快递服务，优势线路，优先保障
+
+	     			</div>
+	     		</div>
+	     		<div class="tekuai_lie">
+	     			<div><img src="images/shunfengbiaokuai.png" /></div>
+	     			<div class="sf">顺丰标快<span>></span></div>
+	     			<div class="zhunshi">全场景的标准时效快递，是顺丰为客户提供的价格经济、时效稳定、服务范围广的门到门快递服务</div>
+	     		</div>
+	     		<div class="clearfix"></div>
+	     	</div>
+	     </div>
+	</body>
+</html>

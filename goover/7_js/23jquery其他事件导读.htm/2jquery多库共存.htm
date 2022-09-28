@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <script>
+        $(function(){
+            function $(ele){
+                return document.querySelector(ele);
+            }
+            console.log($("div"));
+            // 如果$符号冲突  我们就使用jquery·
+            jQuery.each();
+            // 让jquery 释放对$控制权 让用户自己决定
+            var suibian=jQuery.noConflict();
+            console.log(suibian("span"));
+            suibian.each();
+        })
+    </script>
+</head>
+<body>
+    <div></div><span></span>
+    <!-- 问题概述  
+    jquery 使用$作为标识符  随着jquery的流行 其他js库也会用$作为标识符  主要一起使用会引起冲突 -->
+    <!-- 客观需求
+    需要一个解决方案  让jquery和其他js库不存在冲突   可以同时存在  这就叫多库共存
+    -->
+    jQuery解决方案
+  1把里面的$符号  统一改为jQuery 比如jQuery("div")
+  2jQuery变量规定新的名称   $.noConflict()     var xx=$.noConflict();
+  自定义
+
+</body>
+</html>

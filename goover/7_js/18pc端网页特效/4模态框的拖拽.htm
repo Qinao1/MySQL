@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖动模态框</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+
+        }
+
+        .login-header {
+            width: 230px;
+            height: 30px;
+            font-size: 28px;
+            margin: 0 auto;
+
+        }
+
+        a {
+            color: black;
+        }
+
+        .login-body {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 330px;
+            padding: 10px;
+            z-index: 100;
+            background-color: #fdfffc;
+            transform: translate(-50%, -50%);
+        }
+
+        .login-body:hover {
+            cursor: default;
+        }
+
+        .login-bgc {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgb(176, 178, 175, .5);
+        }
+
+        .login-title {
+            width: 100%;
+            height: 70px;
+            font-size: 20px;
+            cursor: move;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .login-close {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 12px;
+            background-color: #fbfffa;
+            border-radius: 50%;
+        }
+
+        .login-input {
+            width: 100%;
+            height: 70px;
+            text-align: center;
+
+        }
+
+        .login-input input {
+            width: 410px;
+            height: 45px;
+            border: 1px solid #edefec;
+            padding: 5px 3px;
+        }
+
+        .login-footer {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-header"><a href="#" id="link">点击，弹出登录框</a></div>
+    <div class="login-body">
+        <div class="login-title">
+            登录会员
+        </div>
+        <span class="login-close"><a href="#" id="closeBtn">关闭</a></span>
+        <div class="login-input">
+
+            <input type="text" placeholder="请输入用户名">
+        </div>
+        <div class="login-input">
+
+            <input type="password" placeholder="登录密码">
+        </div>
+        <div class="login-footer"><a href="#">登录会员</a></div>
+    </div>
+    <div class="login-bgc"></div>
+    <script>
+        var login = document.querySelector('.login-body');
+        var mask = document.querySelector('.login-bgc');
+        var link = document.querySelector('#link');
+        var closeBtn = document.querySelector('#closeBtn');
+        var title = document.querySelector('.login-title');
+        //点击弹出遮罩层 这个link  让mask和login显示出来
+        link.addEventListener('click', function () {
+            mask.style.display = 'block';
+            login.style.display = 'block';
+        });
+        //点击closeBtn  就隐藏mask和login、
+        closeBtn.addEventListener('click', function () {
+            mask.style.display = 'none';
+            login.style.display = 'none';
+        });
+        //开始拖拽
+        // (1)当鼠标按下，就获取鼠标在盒子内部的坐标     移动事件一定要写到按下事件里面
+        title.addEventListener('mousedown', function (e) {
+            var x = e.pageX - login.offsetLeft;
+            var y = e.pageY - login.offsetTop;
+            //(2)鼠标移动的时候，把鼠标在页面标签中的坐标  减去  鼠标在盒子内的坐标 就是模态框的left和top值  
+            document.addEventListener('mousemove',move)
+            function move(e) {
+                login.style.left = e.pageX - x + 'px';
+                login.style.top = e.pageY - y + 'px';
+            }
+            //鼠标弹起就让鼠标移动事件移除
+            document.addEventListener('mouseup',function(){
+                document.removeEventListener('mousemove',move);
+            })
+        })
+
+    </script>
+</body>
+
+</html>

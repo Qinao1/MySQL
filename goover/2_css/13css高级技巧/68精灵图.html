@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box2 {
+            width: 56px;
+            height: 56px;
+            /* border: 1px solid rgb(10, 9, 9); */
+            margin: 40px auto;
+            background: url(../sprites.png) no-repeat  -184px 0;
+        }
+        .box1 {
+            width: 24px;
+            height: 24px;
+            margin: 60px auto;
+            /* background-color: pink; */
+            background: url(../sprites.png) no-repeat  -156px -106px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 为了有效的减少服务器接收和发送请求的次数，提高页面的加载速度出现了css精灵技术 -->
+    <!-- sprites
+    1精灵图主要针对于背景图片的使用，就是把多个背景图片整合到一张大的图片中
+    2这个图片也叫sprite精灵图，或者雪碧图
+    3移动背景图片，此时可以使用background-position
+    4移动的距离就是这个目标图片的x和y的坐标，注意网页中的坐标有所不同
+    因为一般情况下都是往上往左移动，所以数值是负值
+    使用精灵图的时候，需要精确测量每个小背景图片的大小和位置 -->
+    <div class="box2"></div>
+    <div class="box1"></div>
+</body>
+</html>

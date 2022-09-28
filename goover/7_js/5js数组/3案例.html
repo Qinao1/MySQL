@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 求数组中所有元素的和，及平均值
+        var arr = [2, 6, 1, 7, 4];
+        var sum = 0;
+        var average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];//我们加的是数组元素arr[i]，不是计数器i
+        }
+        average = sum / arr.length;
+        console.log(sum, average);//想要输出多个变量用，分隔
+        // 求数组中的最大值
+        var arr1 = [1, 23, 33, 3, 3, 32, 54, 12, 2];
+        var max = arr1[0];
+        for (var j = 1; j < arr1.length; j++) {
+            if (arr1[j] > max) {
+                max = arr1[j];
+            }
+        }
+        console.log('该数组里面的最大值是：' + max);
+        // 求数组中的最xiao值
+        var arr2 = [5, 23, 33, 3, 3, 32, 54, 12, 2];
+        var mix = arr2[0];
+        for (var n = 1; n < arr2.length; n++) {
+            if (arr2[n] < mix) {
+                mix = arr2[n];
+            }
+        }
+        console.log('该数组里面的最xiao值是:' + mix)
+        // 数组转换为分割字符串
+        var arr3 = ['pink', 'red', 'green', 'blue'];
+        var str4 = '';
+        var sep = '!';
+        for (var o = 0; o < arr3.length; o++) {
+            str4 += arr3[o] + sep;
+        }
+        console.log(str4);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

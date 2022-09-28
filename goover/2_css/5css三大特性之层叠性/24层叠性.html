@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠性</title>
+    <style>
+        div {
+            color: red;
+            font-size: 19px;
+        }
+        div {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 相同选择器，给设置相同的样式，此时一个样式就会覆盖（层叠）另一个样式，层叠性
+    主要解决样式冲突问题，
+    层叠性原则
+    样式冲突，遵循的原则是就近原则，哪个样式离结构近，就执行哪个样式
+    样式不冲突，不会层叠 -->
+    <div>长江后浪推前浪，把前浪拍死在沙滩上</div>
+</body>
+</html>

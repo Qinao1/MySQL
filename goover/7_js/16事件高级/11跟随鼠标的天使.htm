@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../mouse.gif" alt="">
+    <script>
+        var pic=document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+            //mousemove只要鼠标移动1px就会触发这个事件
+            // console.log(1);
+            // 每次移动鼠标都要获取新的坐标
+            var x=e.pageX;
+            var y=e.pageY;
+            console.log('x坐标是'+x+'y坐标是'+y);
+            //千万不要忘记给left和top添加px单位
+            pic.style.left=x-30+'px';
+            pic.style.top=y-30+'px';
+        })
+    </script>
+</body>
+
+</html>

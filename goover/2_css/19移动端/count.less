@@ -1,0 +1,21 @@
+// @import ""  导入的意思 可以把一个样式文件，导入到另一个样式文件里面
+// link是把一个样式文件引入到html页面里面 
+@import "next";
+@border: 5px+5;
+@baseFont:50px;
+div {
+    width: 200px - 50;
+    height: (200px+50) * 2;
+    border: @border solid red;
+    background-color: #666 - #222;
+}
+// 运算符的左右侧必须敲空格，隔开
+// 两个数参与运算， 如果只有一个数有单位 则最后的结果，以这个单位为准
+// 3两个数，参与运算  如果两个数都有单位 而且单位不一样  最后的结果，以第一个单位为准
+img {
+    width: (82rem/@baseFont) rem;
+    // height: (82/50) rem;
+// 插件css       这个插件的html文字大小。默认26px  css root搜索可以改默认大小
+    width: 5.0625rem;
+    width: 1rem;
+}

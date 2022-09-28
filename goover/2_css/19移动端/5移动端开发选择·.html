@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:nth-child(1){
+            /* 传统盒子模型   =width+border+padding */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+            border: 10px solid red;
+        }
+        div:nth-child(2){
+            /* 有了这句话就把，盒子变成了css3盒子模型 */
+            
+            box-sizing: border-box;
+            /* 这句话是传统盒模型 */
+            box-sizing: content-box;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            padding: 10px;
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+  <!--   1单独制作移动端页面（主流） 2响应式页面布局
+    通常情况下，网址域名前面加m（mobile）可以打开移动端  通过判断设备 如果是移动端打开就跳到移动端页面
+    改变屏幕宽度改变页面
+    解决方案
+    移动端，浏览器，基本以wabkit为主  因此就需要考虑webkit兼容问题
+    我们可以放心使用h5和c3样式
+    同时我们浏览器的私有前缀  盒子需要考虑添加webkit即可
+    移动端的样式初始化
+    css样式初始化 normalize.css
+    移动端css初始化 推荐使用normalize.css
+    Normalize: 保护了有价值的默认值
+    Normalize:  修复了浏览器的bug
+    Normalize: 是模块化的
+    Normalize: 拥有详细的文档
+    官方网址  http://necolas.github.io/normalize.css/
+    css3 盒模型  box-sizing
+    传统模式宽度计算   盒子宽度=css中设置的width+border+padding
+    css3盒子模型   盒子的宽度=css中设置的宽度width 里面包含了border 和padding
+    也就是说，css3中的盒子模型，padding和border 不会撑大盒子了 -->
+    <!-- 传统盒子与css3盒子模型如何选择
+    移动端完全可以用css3盒子模型
+    pc端如果完全需要兼容，我们就用传统模式·，如果不考虑兼容性问题，我们就选择css3盒子模型 -->
+    <div></div>
+    <div></div>
+</body>
+</html>

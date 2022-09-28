@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        v-html指令   
+            作用  向指定节点中，渲染包含html结构的内容
+            与插值语法的区别  
+            v-html 会替换掉 节点中所有的内容  {{xxx}}不会
+            v-html可以识别html结构
+        严重注意   v-html有安全性问题
+                 在网站上，动态渲染任意html是非常危险的  容易导致 xss攻击
+                 一定要在可信内容上使用v-html  永远不要在用户提交的内容上
+     -->
+    <div id="root">
+        <div>你好啊{{name}}</div>
+        
+        <div v-html="str"></div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#root',
+        data: {
+            name:'尚硅谷',
+            str:'<h3>你好啊</h3>'
+        }
+    })
+</script>
+
+</html>

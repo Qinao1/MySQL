@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // var targetObject={};
+            // var obj={
+            //     id:1,
+            //     name:"andy"
+            // }
+            // // $.extend(target,obj);
+            // $.extend(targetObject,obj);
+            // console.log(targetObject);
+            var targetObject={
+                id:0
+            };
+            var obj={
+                id:1,
+                name:"andy"
+            }
+            // $.extend(target,obj);
+            $.extend(targetObject,obj);
+            // console.log(targetObject);//会覆盖targetObject里面原来的数据
+            var targetObject={
+                id:0,
+                msg:{
+                    sex:'男'
+                }
+            };
+            var obj={
+                id:1,
+                name:"andy",
+                msg:{
+                    age:18
+                }
+            }
+            // $.extend(target,obj);
+            // $.extend(targetObject,obj);
+            // console.log(targetObject);//会覆盖targetObject里面原来的数据
+            // // 浅拷贝 把原来对象里面的复杂数据类型 地址 拷贝给目标对象
+            // targetObject.msg.age=20;
+            // console.log(targetObject);
+            // console.log(obj);
+            // 深拷贝
+            $.extend(true,targetObject,obj);
+            // console.log(targetObject);//会覆盖targetObject里面原来的数据
+            // 浅拷贝 把原来对象里面的复杂数据类型 地址 拷贝给目标对象  如果里面有不冲突的属性会合并到一起
+            targetObject.msg.age=20;
+            console.log(targetObject); //msg ：
+            console.log(obj);
+        })
+    </script>
+</head>
+<body>
+    <!-- 如果想要把某个对象拷贝（合并） 给另一个对象使用  此时可以使用$.extend()方法添加的事件处理程序
+    语法
+    $.extend([deep],target,object1,[objectN]);
+    deep  如果设置为true  为深拷贝   默认flase 浅拷贝
+    target  要拷贝的目标对象
+    object1  待拷贝到第一个对象的对象 -->
+    浅拷贝    只是把被拷贝的对象  复杂数据类型中的地址 拷贝给目标对象  修改目标对象  会影 响 被拷贝的对象
+    深拷贝    完全克隆（拷贝的对象 而不是地址0)  修改目标对象 不会影响被拷贝的对象
+</body>
+</html>

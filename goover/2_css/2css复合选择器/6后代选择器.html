@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器(重要)</title>
+    <style>
+        ul li{
+            color: pink;
+        }
+        ul li a {
+            color: red;
+        }
+        .nav li a {
+            text-decoration: none;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 后代选择器又称为包含选择器，可以选择父元素里面的子元素，其写法就是把外层标签写在前面，内部标签，写在后面
+    中间使用空格分割，当标签发生嵌套时，内层标签就成为外层标签的后代
+    语法
+    元素1  元素2  {样式声明}
+    上述语法表示选择的是   元素1里面的所有元素2（后代元素）
+    例如
+    ul li {样式声明}
+    选择ul里面所有的li标签元素
+    元素1和元素2中间用空格隔开
+    元素1是父级，元素2是子级，最终选择是元素2
+    元素2可以是儿子，也可以是孙子等，只要是元素1的后代即可
+    -->
+    <ul>
+        变态写法
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是ul的孙子</a></li>
+    </ul>
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">不会变颜色</a></li>
+    </ol>
+    <ol class="nav">
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">不会变颜色</a></li>
+        <li><a href="#">不会变颜色</a></li>
+        <li><a href="#">不会变颜色</a></li>
+        <li><a href="#">不会变颜色</a></li>
+    </ol>
+</body>
+
+</html>

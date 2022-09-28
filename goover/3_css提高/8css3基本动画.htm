@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 我们想一打开就有一个盒子，从左边走到右边 */
+        /* 1定义动画 */
+        @keyframes move {
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束状态 */
+            100% {
+                transform:translateX(1000px);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+    <!-- animation动画 是css3中具有颠覆性的特征之一，可以通过设置多个节点，来精确控制一个或一组动画
+    常用来实现复杂的动画效果
+    想比较过度 动画可以实现更多变化，更多控制，连续自动播放等效果
+    animation 
+    制作动画分为两步
+    1先定义动画
+    @keyframes 动画名称 {
+        百分之0就是动画开始
+        100%是动画完成  这样的规则就是动画序列
+        在@keyframes中规定某项css样式  就能创建由当前样式逐渐改为新样式的动画效果
+        动画是使元素从一种样式逐渐变化为另一种样式的效果，可以改变任意多的样式 任意多的次数
+        用百分比来规定变化发生时间，或用关键词from 和to  等于0%和100%
+        0% {
+            width：100px；
+        }
+        100% {
+            width：200px；
+        }
+    }
+    2再使用（调用）动画 -->
+    <div></div>
+</body>
+</html>

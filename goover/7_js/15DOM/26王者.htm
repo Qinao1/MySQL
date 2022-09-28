@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url(../wz.jpg)no-repeat -200px -43px;
+
+        }
+
+        .box {
+            height: 40px;
+            background-color: rgb(51, 51, 51, 0.5);
+            transition: all 3s;
+        }
+
+        .box1 {
+            display: none;
+            height: 140px;
+            background-color: rgb(73, 72, 67, 0.3);
+            border-top: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <script>
+        var box = document.querySelector('.box');
+        var box1 = document.querySelector('.box1');
+        box.onmouseover = function () {
+            box1.style.display = 'block';
+           
+        }
+        box.onmouseout = function () {
+            box1.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

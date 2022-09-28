@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子选择器（重要）</title>
+    <style>
+        .nav>a {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子元素选择器（子选择器）只能选择作为某元素的最近一级子元素，简单理解就是选亲儿子元素
+     语法
+     元素1>元素2
+     eg:
+     div>p{样式声明1}
+     选择的是div里面  所有  最近的一级  p   标签元素
+     元素1和元素2中间用大于号隔开
+     元素1是父级，元素2是子级，最终选择的是元素2
+     元素2必须是元素1的亲儿子，其孙子，重孙子之类都不归他管，也可以称呼它为亲儿子选择器
+    -->
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box {
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/echarts.js"></script>
+</head>
+
+<body>
+    <!-- 常见的数据可视化库
+    D3.js  目前web前端评价最高的javascript可视化工具 （入手难）
+    Echarts  百度出屏的一个开源JavaScript库
+    Highcharts.js 国外的前端可视化库   非商业免费
+    Anth 蚂蚁金服 EChats -->
+    <div class="box">
+
+    </div>
+    
+    <script>
+        // 初始化
+        var myChart = echarts.init(document.querySelector('.box'));
+        console.log(myChart);
+        // 配置相关数据、
+        //      // 基于准备好的dom，初始化echarts实例
+        //   var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+   
+</body>
+
+</html>

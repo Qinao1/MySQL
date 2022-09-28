@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: pink!important;
+        }
+        .test {
+            color:blue
+        }
+        #te {
+            color: rgb(241, 13, 13);
+        }
+    </style>
+</head>
+<body>
+    <!-- 当一个元素指定多个选择器，就会有优先级的产生 -->
+    <!-- 选择器   相同  则执行层叠性 -->
+    <!-- 选择器不同，则根据选择器权重执行 -->
+    <!-- 继承或*（通配型）选择器< 元素选择器< 类选择器，伪类选择器< id选择器《行内样式style=“”《！important 重要的，无穷大  -->
+        <!-- 继承的权重是0！！！！！！！！！！！！ -->
+    <div class="test" id="te" style="color: green">你笑起来真好看</div>
+    a链接浏览器默认指定了一个样式  蓝色的 有下划线  a {color: bule}
+</body>
+</html>

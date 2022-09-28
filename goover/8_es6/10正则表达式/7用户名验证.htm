@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .uname {
+            outline: none;
+
+        }
+
+        input:focus {
+            border: 1px solid #DBA901;
+        }
+
+        span {
+            color: gray;
+            font-size: 14px;
+        }
+        .right{
+            color: green;
+        }
+        .wrong{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 功能需求
+    如果用户名输入合法  则后面提示  信息为 : 用户名合法 并且颜色为绿色
+    如果用户名输入不合法 则后面提示信息为  用户名不符合规范 并且颜色为红色 -->
+    <input type="text" class="uname"><span>请输入用户名</span>
+    <script>
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+        var uname = document.querySelector('.uname');
+        var sapn=document.querySelector('span');
+        uname.onblur = function () {
+            if (reg.test(this.value)) {
+                console.log('right');
+                sapn.className='right';
+                sapn.innerHTML='用户名格式正确';
+            } else {
+                console.log('wrong');
+                sapn.className='wrong';
+                sapn.innerHTML='用户名格式不正确';
+            }
+        }
+    </script>
+</body>
+
+</html>

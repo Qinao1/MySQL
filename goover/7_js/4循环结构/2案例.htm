@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 求1~100之间所有数的平均值    需要一个变量sum，需要一个平均值average
+        var sun = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            // sun += i;
+            sun = sun + i;
+        }
+        average = sun / 100;
+        console.log(average);
+        // 求1~100之间所有偶数和奇数的和  我们需要一个偶数的和  我们需要一个奇数的和
+        var even = 0;
+        var odd = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even = even + i;
+            } else {
+                odd = odd + i;
+            }
+        }
+        console.log(even);
+        console.log(odd);
+        // 求1~100之间所有能被3整除的数字的和
+        var result = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                result = result + i;
+            }
+        }
+        console.log(result);
+        // anli 
+        var num = prompt('请输入班级总人数');//num是班级总人数
+        var sum=0;  //求和的变量
+        var average=0;//求平均值的变量
+        for (var i = 1; i <= num; i++) {
+            var score=prompt('请你输入第个' + i + '学生成绩')
+            // 因为从prompt取过来的数据是  字符串型，所以需要转换为数字型
+            sum=sum+parseFloat(score);
+
+        }
+        average=sum/num;
+        alert('班级总成绩是'+sum);
+        alert('平均成绩是'+average);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

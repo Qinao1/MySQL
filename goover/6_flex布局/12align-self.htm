@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            width: 1000px;
+            height: 400px;
+            background-color: pink;
+            /* 让三个子盒子，沿着侧轴底侧对齐 */
+            /* align-items: flex-end; */
+            /* 只让三号盒子下来 */
+        }
+        section div {
+            width: 200px;
+            height: 100px;
+            background-color: purple;
+            margin: 10px;
+        }
+    section div:nth-child(3) {
+        align-self: flex-end;
+    }
+    section div:nth-child(2) {
+        order: -1;
+    }
+    </style>
+</head>
+<body>
+    <!-- order属性定义子项的排列顺序
+    数值越小越靠前，    默认值为0 -->
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+</body>
+</html>

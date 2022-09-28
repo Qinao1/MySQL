@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    string 的扩展方法
+    模板字符串
+    ES6新增的创建字符串的方式 使用 反引号定义
+    模板字符串的特点
+    1 模板字符串中，可以解析变量
+
+    2模板字符串 中可以换行
+    <!-- 特点3 -->
+    3.在模板字符串中可以调用函数
+
+    <script>
+        let name = `这是一个模板字符串`;
+        console.log(name);
+        //1 传统做法，需要使用字符串拼接 取而代之的是$符号  模板字符串 可以直接将变量的内容解析在这
+        //let sayHello=`hello,my name is ${name}`; //hello,my name is zhangsan
+        let name1 = `张三`;
+        let sayHi = `hello,my name is ${name1}`;
+        console.log(sayHi);
+
+        // 2模板字符串的内容 是可以换行的 当模板字符串的内容比较多时 它的显示情况是比较好的
+        let result = {
+            name: 'zhangsan',
+            age: 10,
+            sex: '男'
+        }
+        let html = `<div>
+        <span>${result.name}</span>
+        <span>${result.age}</span>
+        <span>${result.sex}</span>
+        </div>`;
+        // 模板字符串中，有三个sapn就是换行显示的 普通的字符串是做不到这一点的，
+        // 由于普通字符串，不能换行 只能在一行显示 看起来非常不美观
+        console.log(html);
+
+        // 3在模板字符串中是可以调用函数的  字符串中，调用函数的位置 将会显示，函数执行后的返回值
+        // const sayHello=function(){
+        //     return '哈哈哈 追不到我吧 我就是这么强大';
+        // };
+        // let greet=`${sayHello()} 哈哈哈哈`;
+        // console.log(greet);
+
+        const fn=()=>{
+            return '我是fn函数';
+        };
+        let html1=`我是模板字符串 ${fn()}`;   //在调用fn函数的位置 将会显示 函数执行完毕后的返回值
+        console.log(html1);
+    </script>
+</body>
+
+</html>

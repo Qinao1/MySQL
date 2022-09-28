@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    实例方法
+    add(value); 添加某个值 返回Set结构本身
+    delete(value) 删除某个值 返回一个布尔值 表示删除成功
+    has(value) 监测集合中，是否包含某个元素 返回 boolen值
+    clear() 清除所有成员 没有返回值
+    <script>
+        const s = new Set();
+        s.add(1).add(2).add(3); //向set结构中添加值
+        console.log(s.size); //3
+        s.delete(2);            //删除set结构中2的值
+        console.log(s.size);  //2
+        let ss = s.has(1);             //表示set结构中 是否有1这个值 返回布尔值
+        console.log(ss); //true
+        s.clear();            //清除set结构中的所有值
+        console.log(s.size); //0
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        * {
+            border-collapse: collapse;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .box {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 100px;
+            height: 20px;
+            border: 1px solid #5f5757;
+
+
+        }
+
+        .jian,
+        .jia {
+            width: 15px;
+
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .jian:hover {
+            cursor: pointer;
+        }
+
+        .jia:hover {
+            cursor: pointer;
+        }
+
+        .box .num {
+            width: 60px;
+        }
+
+        .sum {
+            width: 20px;
+        }
+
+        .zhong {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">
+        <div class="price">￥12.60</div>
+        <div class="box">
+            <div class="jian">-</div>
+            <input type="text" class="num" value="0"></input>
+            <div class="jia">+</div>
+        </div>
+        <div class="sum">￥0.00</div>
+    </div>
+    <div class="box2">
+        <div class="price">￥12.90</div>
+        <div class="box">
+            <div class="jian">-</div>
+            <input type="text" class="num" value="0"></input>
+            <div class="jia">+</div>
+        </div>
+        <div class="sum">￥0.00</div>
+    </div>
+    <div class="box3">
+        <div class="price">￥12.10</div>
+        <div class="box">
+            <div class="jian">-</div>
+            <input type="text" class="num" value="0"></input>
+            <div class="jia">+</div>
+        </div>
+        <div class="sum">￥0.00</div>
+    </div>
+    <div class="zhong">
+
+        <span class="shu"> 选了<em>0</em>件商品</span>
+
+        <span class="jiaqian">总价<em>￥0.00</em></span>
+        <div>去结算</div>
+    </div>
+    <script>
+        $(function () {
+            $(".jia").click(function () {
+                // 得到当前兄弟文本框的值
+                var n = $(this).siblings(".num").val();
+                // console.log(n);
+                n++;
+                $(this).siblings(".num").val(n)
+                // 计算模块
+                var p = $(this).parent().siblings(".price").html();
+                // console.log(p);
+                var p = p.substr(1);
+                // console.log(p);
+                // console.log(n);
+                $(this).parent().siblings(".sum").html('￥' + (p * n).toFixed(2));
+                getSum();
+            });
+            $(".jian").click(function () {
+                // 得到当前兄弟文本框的值
+                var n = $(this).siblings(".num").val();
+                // console.log(n);
+
+                if (n == 0) {
+                    return false;
+                }
+                n--;
+                $(this).siblings(".num").val(n);
+                // 计算模块
+                var p = $(this).parent().siblings(".price").html();
+                // console.log(p);
+                var p = p.substr(1);
+                // console.log(p);
+                // console.log(n);
+                // console.log(typeof (p * n));
+                $(this).parent().siblings(".sum").html('￥' + (p * n).toFixed(2));
+
+                getSum();
+            })
+            // 用户修改文本框的值 计算 小计模块
+            $(".num").change(function () {
+                // 先得到文本框的值  乘以当前商品的单价
+                var n = $(this).val();
+                var p = $(this).parent().siblings(".price").html();
+                // console.log(p);
+                var p = p.substr(1);
+                $(this).parent().siblings(".sum").html('￥' + (p * n).toFixed(2));
+                getSum();
+            })
+
+        })
+
+        // Math.ceil
+        // parents(".sum")=parent().parent().parent(".sum")  指定的祖先元素
+        //计算总计  和总额模块
+        function getSum() {
+            var count = 0;//计算总件数
+            var money = 0;//计算总价钱
+            $(".num").each(function (i, ele) {
+                count += parseInt($(ele).val());
+            });
+            $(".shu em").text(count);
+            $(".sum").each(function (i, ele) {
+                money += parseFloat($(ele).text().substr(1));
+            })
+            $(".jiaqian em").text(money.toFixed(2));
+        }
+    </script>
+</body>
+
+</html>

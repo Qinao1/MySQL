@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+
+        .txt {
+            margin: 20px auto;
+        }
+
+        ul li {
+            /* display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between; */
+            display: none;
+            height: 15px;
+            line-height: 15px;
+            border-bottom: 1px dotted black;
+        }
+
+        ul li a {
+            float: right;
+        }
+    </style>
+    <script>
+        $(function () {
+            $(".btn").on("click", function () {
+                // alert(1)
+                if ($(".txt").val().length > 0) {
+                    var li = $("<li></li>");
+                    li.html($(".txt").val() + "<a href='javascript:;'>删除</a>");
+                    $("ul").prepend(li);
+                    li.slideDown();
+                    $(".txt").val("");
+
+                } else {
+                    alert("内容为空");
+                    return;
+                }
+            })
+            // $("ul a").click(function(){  //此时的click 不能给动态创建a添加事件
+            //     alert(11)
+            // })
+            // on可以给动态创建的的元素 绑定事件
+            $("ul").on("click", "a", function () {
+                $(this).parent().slideUp(function () {
+                    $(this).remove();
+                });
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box" id="weibo">
+        <span>微博发布</span>
+        <textarea name="" class="txt" cols="30" rows="10"></textarea>
+        <button class="btn">发布</button>
+        <ul></ul>
+    </div>
+</body>
+
+</html>

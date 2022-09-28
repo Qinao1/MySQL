@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可选链操作符</title>
+</head>
+<body>
+    <script>
+        //?.  什么时候用当我们在应对 对象类型的参数的时候，这个对象的深度比较深，就是层级比较深 这个时候我们用？. 就不用做层级的一个判断了
+        function main(config){
+            // const abHost=config &&config.ab &&config.ab.host
+            // const abHost=config.ab.host
+            const abHost=config?.ab?.host
+            console.log(abHost);
+        }
+
+        main({
+            ab:{
+                host:'192.168.1.100',
+                username:'root'
+            },
+            cache:{
+                host:'192.168.1.100',
+                username:'admin'
+            }
+        })
+    </script>
+</body>
+</html>

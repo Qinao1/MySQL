@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        .message {
+            display: inline-block;
+            background: url(../xin_ico.png) no-repeat  left center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .wrong {
+            color: red;
+            background: url(../xai.jpg);
+        }
+        .right{
+            color: green;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 用户如果离开密码框，输入个数不是6~16  则提示错误信息  否则提升输入正确信息 -->
+    <div class="serch">
+        <input type="password" class="ipt">
+        <p class="message">请输入6~16位密码</p>
+    </div>
+    <script>
+        //获取元素
+        var ipt = document.querySelector('.ipt');
+        var message = document.querySelector('.message');
+        //注册事件 失去焦点
+        ipt.onblur = function () {
+            //根据表单里面值的长度 ipt.value.length
+            if (this.value.length < 6 || this.value.length > 16) {
+                // console.log('错误');
+                message.className = 'message wrong';
+                message.innerHTML='你输入的位数不对';
+            }else{
+
+            }
+        }
+    </script>
+</body>
+
+</html>

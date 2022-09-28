@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    正则表达式的组成
+    一个正则表达式 可以由简单的字符构成 比如/abc/也可以是简单和特殊字符的祝贺比如/ab*c/ 
+    其中特殊字符也被称为 元 字符 在正则表达式中是具有特殊意义的专用符号 如 ^ $ +等
+    边界符
+    ^             表示匹配行首的文本 （以谁开始）
+    $             表示匹配行尾的文本 （以谁结束）
+    如果^ $在在一起 必须是精确匹配
+    <script>
+        //边界符 ^ $
+        var rg=/abc/;  //正则表达式里面不需要 加引号  不管是数字型 还是字符型
+        // 只要包含有abc这个字符串 返回的都是true
+        console.log(rg.test('abc'));
+        console.log(rg.test('abcd'));
+        console.log(rg.test('aabcd'));
+        console.log('---------------------------');
+        // abc 开头
+        var reg=/^abc/;
+        console.log(reg.test('abc'));//true
+        console.log(reg.test('abcd'));//true
+        console.log(reg.test('aabcd'));//false
+        console.log('---------------------');
+        var reg1=/^abc$/;  //精确匹配，要求必须是abc字符串才符合规范
+        console.log(reg1.test('abc'));//true
+        console.log(reg1.test('abcd'));//false
+        console.log(reg1.test('aabcd'));//false
+        console.log(reg1.test('abcabc'));//false
+    </script>
+
+</body>
+</html>

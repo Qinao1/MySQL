@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .father {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            margin: 100px auto;
+
+
+        }
+
+        .son {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 事件流，描述的是从页面中接收事件的顺序 -->
+    <!-- 事发生时 会在元素节点之间按照特定的顺序传播  这个传播过程即dom事件流 -->
+    <!-- dom事件流分为3个阶段
+    1捕获阶段
+    2当前目标阶段
+    3冒泡阶段 -->
+    <!-- 
+        js代码只能执行捕获阶段或冒泡阶段其中的一个阶段
+    onclick只能得到冒泡阶段
+    addeventlistener（type，listener[,usecaptrue]）第三个参数如果是true   表示事件捕获阶段调用处理程序
+    如果是flase（不写，默认就是flase）表示事件在冒泡阶段调用事件处理程序
+-->
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //  addeventlistener（type，listener[,usecaptrue]）第三个参数如果是true   表示事件捕获阶段调用处理程序
+        // 如果是flase（不写，默认就是flase）表示事件在冒泡阶段调用事件处理程序
+        // doucument-html-body-father-son
+        // var son = document.querySelector('.son');
+        // son.addEventListener('click', function () {
+        //     alert('son');
+        // }, true);
+        // var father = document.querySelector('.father');
+        // father.addEventListener('click', function () {
+        //     alert('father');
+        // }, true);
+        //只能执行其中一个阶段，所以要注释起来
+         //  addeventlistener（type，listener[,usecaptrue]）第三个参数如果是true   表示事件捕获阶段调用处理程序
+        // 如果是flase（不写，默认就是flase）表示事件在冒泡阶段调用事件处理程序
+        // son-father-body-html-document
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function () {
+            alert('son');
+        }, false);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () {
+            alert('father');
+        }, false);
+        document.addEventListener('click',function(){
+            alert('document');
+        })
+        //实际开发中，我们很少使用事件捕获，我们更关注 事件冒泡
+        // 有些事件是没有冒泡的  onblur  onfocus  onmouseenter onmouseleave
+        //                     失去焦点  获得焦点
+        // 事件冒泡有时候会带来麻烦    有时候又会帮助很巧妙的做某些事情
+    </script>
+</body>
+
+</html>

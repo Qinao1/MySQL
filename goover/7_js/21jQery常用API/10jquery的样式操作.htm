@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jquery可以使用css方法来修改简单元素样式  也可以操作·类 修改多个样式 -->
+    <div></div>
+    <script>
+        $(function () {
+            // 操作样式之css方法 参数只写属性名 返回的是属性值
+        //    console.log($("div").css("width"));
+        //    $("div").css("width","300") //值如果是数字 可以不带单位
+        //    $("div").css(height,"300px")属性名 一定要加引号
+        // 参数可以是对象形式   方便设置多组样式
+        $("div").css({
+            width:400,
+            height:400,
+            backgroundColor:"red"
+            // 如果是复合属性则必须采取驼峰命名法 如果值不是数字 则需要加引号
+        })
+        })
+        
+
+    </script>
+</body>
+
+</html>

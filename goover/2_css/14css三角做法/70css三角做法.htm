@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border: 10px solid pink; */
+            border-top: 10px solid pink;
+            border-bottom: 10px solid rgb(15, 14, 14);
+            border-right: 10px solid skyblue;
+            border-left: 10px solid blue;
+        }
+        .box2{
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: pink;
+            margin: 20px auto;
+        }
+        .jd {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: pink;
+        }
+        .jd span {
+            position: absolute;
+            right: 15px;
+            top: -10px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            /* 为了照顾兼容性 */
+            border: 5px solid transparent;
+            border-bottom-color: red;
+        }
+        .xiaomi {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: #cccc;
+            margin: 0 auto;
+        }
+        .xiaomi span {
+            width: 0;
+            height: 0;
+            right: -20px;
+            bottom: 95px;
+            position: absolute;
+            /* background-color: pink; */
+            border: 10px solid transparent;
+            border-left-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd"><span></span></div>
+    <div class="xiaomi"><span></span></div>
+</body>
+</html>

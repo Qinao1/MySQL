@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    什么是fs文件系统模块
+    fs模块是node.js 官方提供的 用来操作文件的模块  它提供了一系列的方法和属性 用来满足用户对文件的操作需求
+    fs.readFile()方法 用来读取指定文件中的内容
+    fs.writeFile()方法 用来向指定的文件写入内容
+
+    如果需要在JavaScript代码中，使用fs模块来操作文件 则需要使用如下的方式先导入它
+    const fs=require('fs')
+    读取文件中的内容
+    fs.readFile() 语法格式
+    fs.readFile(path[, options],callback)
+    第一个参数  必选参数  字符串 表示文件路径
+    第二个参数 可选参数 表示以什么编码来读取文件
+    第三个参数 必选参数   文件读取完成后 通过回调函数拿到读取的结果
+    以utf8的编码格式 读取指定文件的内容  并打印err 和dataStr的值
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        table {
+            width: 500px;
+            /* height: 200px; */
+            border-collapse: collapse;
+            margin: 100px auto;
+        }
+
+        table th,
+        td {
+            text-align: center;
+            font-weight: 400;
+            border: 1px solid black;
+        }
+
+        table thead {
+            height: 30px;
+            background: #808080;
+        }
+
+        tbody tr {
+            height: 24px;
+            line-height: 24px;
+        }
+
+        table th {
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        //  先准备好数据
+        var dates = [
+            {
+                name: '魏璎珞',
+                subject: 'javaScript',
+                score: 100
+            },
+            {
+                name: '红利',
+                subject: 'javaScript',
+                score: 100
+            },
+            {
+                name: '傅恒',
+                subject: 'javaScript',
+                score: 100
+            }
+        ];
+        //往tbody里面创建行（通过数组的长度） 有几个人创建几行
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < dates.length; i++) {//外面的for循环管的是行
+            //创建tr行
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            //行里面创建单元格  (跟数据有关系的三个单元格)  单元格的数量取决于每个对象里面的属性个数 for循环遍历对象
+            for (var k in dates[i]) {//for循环管的的列  td
+                var td = document.createElement('td');
+                //把对象里面的属性值给td单元格
+                td.innerHTML=dates[i][k];
+                tr.appendChild(td);
+            }
+            // 创建有删除两个字的单元格
+            var td=document.createElement('td');
+            td.innerHTML='<a href="javascript:;">删除</a>';
+            tr.appendChild(td);
+        }
+        // 删除操作
+        var as=document.querySelectorAll('a');
+        for (var i=0;i<as.length;i++){
+            as[i].onclick=function(){
+                //点击a删除当前a所在的行(链接的爸爸的爸爸) node.removeChild(child);
+                tbody.removeChild(this.parentNode.parentNode)
+            }
+        }
+    </script>
+</body>
+
+</html>

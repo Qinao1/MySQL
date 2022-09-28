@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    严格模式，可以应用到整个脚本或个别函数中，因此在使用时，我们可以将严格模式分为 为脚本开启严格模式 和 为函数开启严格模式两种情况
+    |
+    在整个script标签里面都可以开启严格模式
+    或是也可以在函数中开启严格模式
+    其余不开启
+    为脚本开启严格模式 、
+    为整个脚本开启严格模式 需要在所有语句之前放一个特定语句 "use strict" 或'use strict'
+
+    <!-- 为整个脚本(script标签)开启严格模式 -->
+    <script>
+        'use strict'; //ie10以前的版本会忽略
+        // 下面的js代码  就会按照严格模式执行代码
+
+    </script>
+    <script>
+        // 为了防止变量污染 或者说为了整个脚本开启一个独立的作用域空间  
+        (function () {
+            // 把脚本里面的所有代码都放到这个立即执行函数里面， 这样就创建了一个独立的作用域
+            'usr strict';
+        })()
+    </script>
+    <!-- 为某个函数开启严格模式                                                       -->
+    <script>
+        // 此时只是给fn开启严格模式
+        function fn() {
+            'usr strict';
+            // 下面的代码按照严格模式执行
+        }
+        
+        function fun() {
+            // 里面的还是按照普通模式执行
+        }
+    </script>
+</body>
+
+</html>

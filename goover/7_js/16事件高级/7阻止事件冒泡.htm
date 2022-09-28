@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .father {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            margin: 100px auto;
+
+
+        }
+
+        .son {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 阻止冒泡事件冒泡的两种方式
+    事件冒泡： 开始时由具体的元素接收   然后逐级向上传播到dom最顶点节点
+    事件冒泡的、本身的特性，会带来的坏处    也会带来的好处，需要我们灵活掌握 -->
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        //常见事件对象的属性和方法
+        //阻止冒泡   dom  推荐标准
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function (e) {
+            alert('son');
+            e.stopPropagation();//stop停止 propagation    传播
+        }, false);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function (e) {
+            alert('father');
+            e.stopPropagation();
+        }, false);
+        document.addEventListener('click', function () {
+            alert('document');
+        })
+    </script>
+</body>
+
+</html>

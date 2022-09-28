@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 全选  -->
+    全选
+    <input type="checkbox" class="checkall">
+    1<input type="checkbox" class="j-checkbox">
+    2<input type="checkbox" class="j-checkbox">
+    3<input type="checkbox" class="j-checkbox">
+    4<input type="checkbox" class="j-checkbox">
+    5<input type="checkbox" class="j-checkbox">
+    全选
+    <input type="checkbox" class="checkall">
+    <script>
+        $(function () {
+            //全选 全不选
+            // 事件可以使用change
+            $(".checkall").change(function () {
+                // console.log($(this).prop("checked"));
+                // $(".j-checkbox").prop("checked",true)
+                $(".j-checkbox,.checkall").prop("checked", $(this).prop("checked"));
+                // :checked 查找被选中的表单元素
+                // 如果小按钮等于5就应该把全选按钮选上   否则全选按钮不选
+
+            })
+            $(".j-checkbox").change(function() {
+                    // if (被选中的小复选框的个数 = 5) {
+                    //     // 就要选中全选按钮
+                    // } else {
+                    //     // 不要选中全选按钮
+                    // }
+                    // console.log($(".j-checkbox:checked").length);
+                    // $(".j-checkbox") 这个是所有小复选框的个数
+                    if ($(".j-checkbox:checked").length === $(".j-checkbox").length){
+                        $(".checkall").prop("checked",true);
+                    }else {
+                        $(".checkall").prop("checked",false);
+                    }
+                    
+                })
+        })
+    </script>
+</body>
+
+</html>

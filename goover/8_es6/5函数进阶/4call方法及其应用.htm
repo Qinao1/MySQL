@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 改变函数内部this指向
+    JavaScript 为我们提供了一些函数方法 来帮我们更优雅的处理函数内部this的指向问题 常用的有bind() call() apply()三种方法
+    call方法
+    调用一个对象 简单理解为调用函数的方式 但是它可以改变函数this的指向
+    fun.call(this.Arg,arg1,arg2....)
+
+    apply()方法 调用一个函数 简单理解为调用函数方式 但是它可以改变函数的this指向
+    fun.apply(this.Arg,[argsArray])
+    this.Array fun函数运行时指定this的值 还是指向谁
+    argArray 传递的值 必须包含在数组里面
+    返回值就是函数的返回值 因为它就是调用函数 -->
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <script>
+        // 改变函数内this指向  js提供了三种方法bind() call() apply()
+
+        // 1call()
+
+        // var o = {
+        //     name: 'andy'
+        // }
+        // function fn(a, b) {
+        //     console.log(this);
+        //     console.log(a + b);
+        // }
+        // fn.call(o, 1, 2);//后面是实参
+        // // call()可以调用函数，第二个可以改变函数内的this指向
+
+        // // call()的主要作用，可以实现继承
+        // function Father(uname, age, sex) {
+        //     this.uname = uname;
+        //         this.age = age;
+        //         this.sex = sex;
+        // }
+        // function Son(uname,age,sex){
+        //     Father.call(this,uname,age,sex);
+        // }
+        // var son=new Son('刘德华',18,'男');
+        // console.log(son);
+
+        // 2apply()方法 apply运用应用的意思
+        //     var o={
+        //         name:'andy'
+        //     }
+
+        //     function fn(arr){
+        //         console.log(this);
+        //         console.log(arr);//'pink' 打印的不是一个数组 是字符串
+        //     };
+        //     fn.apply(o,['pink'])
+        //     // 也是调用函数，可以改变函数内部的this指向
+        //     // 但是它的参数必须是数组(伪数组)
+        //     // apply()的主要应用  比如我们可以利用apply 借助于数学内置对象 求最大值
+        //     // Math.max();
+        //     var arr=[1,22,3,55,777,654,31];  传递的是数字就转换成数字型
+        //     var arr1=['red','pink'];         传递的是字符串就转换成字符串型
+        // //    var max= Math.max.apply(null,arr);
+        //    var max= Math.max.apply(Math,arr);
+        //    var min= Math.min.apply(Math,arr);
+        //    console.log(max);
+        //    console.log(min);
+
+        // 3bind()方法
+        // bind()方法 不 会调用函数  但是能改变函数内部this指向
+        // fun.bind(thisArg,arg1,arg2...)
+        // thisArg  在fun函数运行时 指定的this值
+        // arg1 arg2 传递的其他参数
+        // 返回由指定的this  值 是   初始化参数改造完成后的  ！！！！原函数拷贝
+
+        // bind 捆绑 绑定的意思
+        var o = {
+            name: 'andy'
+        };
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+        }
+        var f = fn.bind(o, 1, 2);
+        f();
+        // 它不会调用原来的函数 可以改变原来函数内部的this指向
+        // 返回的是原函数改变this指向之后产生的新函数
+        // 如果有的函数我们 不需要立即调用  但是又想改变这个函数内部的this指向 此时用bind
+        // 我们有一个按钮 当我们点击了之后 就禁用这个按钮  3秒钟之后开启这个按钮
+        var btn=document.querySelector('button');
+        btn.onclick=function(){
+            this.disabled=true;  //这个this指向的是btn这个按钮
+            // var that=this;
+            setTimeout(function(){
+                this.disabled=false;  //定时器函数里面的this 指向的是window
+               // that.disabled=false;  //定时器函数里面的this 指向的是btn
+
+            }.bind(this),3000);  //这个this指向的是btn这个对象
+        }
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                this.disabled = true;
+                setTimeout(function () {
+                    this.disabled = false;
+                }.bind(this), 2000)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

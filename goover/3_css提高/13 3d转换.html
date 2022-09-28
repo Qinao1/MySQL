@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 透视写到被观察的父盒子上面 */
+            perspective: 5000px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform: translate3d(100px,100px,100px);
+            
+            /* translateZ后面的单位一般跟px
+            translateZ（100px）向外移动100px */
+            /* xyz是不能省略的，没有就写0 */
+            /* 需要写透视，透视写在元素的父盒子上
+            d就是视距，视距是一个距离人的眼睛看到屏幕的距离、
+            z就是z轴，物体距离屏幕的距离，z轴越大（正值）我们看到的物体就越大
+             */
+        }
+    </style>
+</head>
+<body>
+    <!-- 3d坐标，指的是立体空间，
+    x水平向右            x右边是正值  左边是负值
+    y轴垂向下            y下边是正值  上边是负值
+    z轴垂直向屏幕          x外面是正值  往里面是负值
+    最常用的是3d位移和3d旋转
+    3d位移：translate3d（x，y，z）
+    3d旋转：rotate3d（x，y，z）
+    透视：perspective
+    3d呈现 transform-style -->
+    <div>阿达</div>
+    <div>阿达</div>
+    <div>阿达</div>
+</body>
+</html>

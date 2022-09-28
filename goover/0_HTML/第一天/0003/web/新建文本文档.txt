@@ -1,0 +1,21 @@
+只是个文档类型声明。作用就是告诉浏览器使用的哪种html版本来显示网页
+<html lang="en">定义当前文档显示的语言。en是英语。zh-CN是中午。
+    网页提示这个页面是英文还是中文然后提示用户。需不需要翻译
+<head>这是头部
+    
+    <meta charset="UTF-8">char是字符的意思set叫集合。charset叫字符集
+    字符集是多个字符的集合。方便计算机能够识别和储存文字。
+    有老的charset值。现在最多的是万国码UTF-8.
+    在head标签内。可以通过<meat></meat>标签的charset属性来规定html文档应该使用种字符编码
+    意思就是meat啥意思都没。个人猜测下面的开头带meat是让下面的也遵守charset。utf-8的码。
+    用万国码来解析
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    这两句移动端开发的时候再讲
+    <title>vscode</title>这是头部的一部分。头部标题
+</head>
+<body>这是身体。这几个代码都不用写，自动生成
+     
+</body>
+</html>
+标签tag

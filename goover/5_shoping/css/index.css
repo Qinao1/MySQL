@@ -1,0 +1,531 @@
+.main {
+
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus:hover {
+    cursor: pointer;
+}
+
+.focus {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 721px;
+    height: 455px;
+
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus .licon a {
+    color: #fff;
+}
+
+.focus .ricon a {
+    color: #fff;
+}
+
+.focus .licon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    height: 30px;
+    width: 20px;
+
+    background-color: rgb(29, 29, 29, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    transform: translate(0, -50%);
+}
+
+.focus .ricon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    height: 30px;
+    width: 20px;
+    color: #fff;
+    background-color: rgb(29, 29, 29, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    transform: translate(0, -50%);
+}
+
+.focus ol {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    width: 300px;
+    height: 20px;
+    flex-flow: row nowrap;
+}
+
+.focus ol li {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.focus ol .current {
+    background-color: #fff;
+}
+
+.newflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    content: '';
+    font-family: 'icomoon';
+}
+
+.new-bd {
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+.new-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 文字溢出隐藏 */
+    overflow: hidden;
+    /* 强制一行显示 */
+    white-space: nowrap;
+    /* 用省略号代替 */
+    text-overflow: ellipsis;
+}
+
+.lifeservise {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservise ul {
+    width: 252px;
+}
+
+.lifeservise ul li {
+    float: left;
+    width: 62px;
+    height: 71px;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.lifeservise ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    background: url(../imges/icons1.png) no-repeat -18px -15px;
+}
+
+.lifeservise ul li .one {
+    background: url(../imges/icons1.png) no-repeat -18px -15px;
+}
+
+.lifeservise ul li .two {
+    background: url(../imges/icons1.png) no-repeat -18px -15px;
+}
+
+.lifeservise ul .icon {
+    position: relative;
+}
+
+.lifeservise .jian_icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0;
+    width: 0;
+    color: #ffff;
+    border-color: #589d5a #589d5a transparent #589d5a;
+    border-style: solid;
+    border-width: 14px 8px 5px 8px;
+}
+
+.jian_icon .icon {
+    position: absolute;
+    top: -16px;
+    right: 6px;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+
+.recom_hd {
+    float: left;
+    height: 133px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom_hd p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd ul li {
+    position: relative;
+    float: left;
+}
+
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3):after {
+    content: '';
+    position: absolute;
+    right: o;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: red;
+    z-index: 1;
+}
+
+.like {
+    height: 260px;
+    margin-top: 30px;
+}
+
+.word_left {
+    font-size: 14px;
+}
+
+.word_right {
+    margin-left: 1092px;
+}
+
+.word_right::after {
+    content: '\e984';
+    font-family: 'icomoon';
+}
+
+.like .like_bd {
+    position: relative;
+    height: 215px;
+    border: 1px solid #ededed;
+}
+
+.like .like_bd .box {
+    float: left;
+    width: 129px;
+    margin: auto 35px;
+}
+
+.like .like_bd .box .price {
+    color: red;
+}
+
+.like .like_bd .box img {
+    width: 125px;
+    height: 125px;
+}
+
+/* 推荐模块 end  */
+/* 有趣区start */
+.interest {
+    height: 284px;
+}
+
+.interest .interest_he {
+    font-size: 16px;
+}
+
+.interest .interest_bd {
+    height: 258px;
+}
+
+.thing_he {
+    font-size: 16px;
+}
+
+.interest_bd .focus {
+    float: left;
+    width: 190px;
+    height: 100%;
+}
+
+.interest_bd .thing,
+.street {
+    float: left;
+    width: 230px;
+    height: 100%;
+    border: 1px solid #000;
+    border-left: 0;
+    overflow: hidden;
+}
+
+.thing .thing_he,
+.street_hd {
+    width: 210px;
+    height: 30px;
+    margin: 0 10px;
+    border-bottom: 1px dotted #000;
+    text-align: center;
+    line-height: 30px;
+}
+
+.thing .thing_bd img {
+    width: 230px;
+    height: 113px;
+}
+
+.thing_bd .line {
+    border-top: 1px solid #ededed;
+}
+
+.street_bd .one {
+    height: 74px;
+    width: 230px;
+    margin-top: 2px;
+    border-bottom: 1px solid red;
+
+}
+
+.street_bd .one:hover {
+    width: 240px;
+    height: 75px;
+    transition: all 0.1s;
+}
+
+.street_bd .two,
+.street_bd .three {
+    float: left;
+    width: 115px;
+    height: 151px;
+}
+
+.street_bd .two {
+    border-right: 1px solid white;
+}
+
+.street_bd .two {
+    width: 114px;
+}
+
+.brand {
+    float: left;
+    width: 400px;
+    height: 100%;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.brand ul li {
+    float: left;
+    height: 35px;
+    width: 199px;
+}
+
+.brand ul li:nth-child(even) {
+    border-bottom: 1px dotted black;
+    background-color: pink;
+}
+
+.brand ul li:nth-child(odd) {
+    border-bottom: 1px dotted red;
+    border-right: 1px dotted green;
+    background-color: skyblue;
+}
+
+/* 有趣区 end  */
+
+/* 家用电器区 start  */
+.dianqi {
+    height: 390px;
+    margin-top: 30px;
+    /* background-color: red; */
+}
+
+.dianqi .dianqi_hd {
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.dianqi_word {
+    color: #cc353e;
+    font-size: 17px;
+}
+
+.dianqi_hot ul {
+    display: flex;
+    /* width: 500px; */
+    background-color: white;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    margin-top: 12px;
+}
+
+.dianqi_hot ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 0 16px;
+    margin-top: 4px;
+}
+
+.dianqi_bd {
+    display: flex;
+    height: 360px;
+    border-top: 2px solid red;
+}
+
+.dianqi_bd .box1_hd {
+    display: flex;
+    width: 212px;
+    height: 100px;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.dianqi_bd .box1_hd li {
+    width: 88px;
+    height: 33px;
+    margin: 0px 9px;
+    text-align: center;
+    line-height: 33px;
+    border-bottom: 1px solid #ededed;
+    /* background-color: blue; */
+}
+
+.dianqi_bd .box1_bd {
+    width: 100px;
+    height: 280px;
+    padding: 10px;
+}
+
+.dianqi_bd .box3 {
+    /* width: 220px; */
+    /* height: 100%; */
+    border-right: 1px solid #ededed;
+}
+
+.box3_img {
+    border-bottom: 1px solid #ededed;
+}
+
+.dianqi_bd .box4 {
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+.box5_img1 {
+    border: 1px solid #ededed;
+    border-left: 0px;
+}
+
+/* 家用电器区end */
+/* 按钮 */
+.an {
+    width: 66px;
+    height: 84px;
+    position: fixed;
+    top: 118px;
+    left: 0px;
+}
+
+.an ul li {
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    border-bottom: 1px solid #ededed;
+}
+
+/* 米 */
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+.mi {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 14px;
+
+}
+
+.mi .one {
+    text-align: center;
+    width: 230px;
+    background-color: rgb(253, 253, 253);
+}
+
+.one img {
+    margin-top: 50%;
+}
+
+.one:hover {
+    margin-top: -3px;
+    margin-bottom: -4px;
+    box-shadow: 0px 0px 40px rgb(233, 233, 233);
+    transition: all .3s;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 除了定义组件使用的symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法
+        // Symbol的属性 这个属性用来做对象的属性  提供对symbol属性的设置可以改变对象在特定场景下的表现结果
+       /*  class person {
+            static [Symbol.hasInstance](param) {
+                console.log(param);
+                console.log('我被用来监测类型了');
+                return false;      //可以自己去控制类型检测
+            }
+        }
+        let o={}
+        console.log(o instanceof person); */
+
+        const arr=[1,2,3]
+        const arr2=[4,5,6]
+        arr2[Symbol.isConcatSpreadable]=false;  //控制值是否可以展开
+        console.log(arr.concat(arr2));//做数组合并的
+
+        
+    </script>
+</body>
+
+</html>

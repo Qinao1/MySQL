@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        input {
+            display: flex;
+            width: 300px;
+            height: 20px;
+            margin: 100px auto;
+            outline: none;
+            padding: 8px 10px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="邮箱/ID/手机号">
+    <script>
+        //获取
+        var ipt = document.querySelector('input');
+        //注册事件 执行程序
+        ipt.onfocus = function () {
+            if (this.value === '邮箱/ID/手机号') {
+                this.value = '';
+                this.style.border = '1px solid pink'
+                this.style.color = 'black'
+            }
+        }
+        ipt.onblur = function () {
+            this.value = '邮箱/ID/手机号';
+            this.style.color = '#999'
+        }
+    </script>
+</body>
+
+</html>

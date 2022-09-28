@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .juan {
+            position: relative;
+            width: 410px;
+            height: 140px;
+            overflow: hidden;
+            box-shadow: 0px 0px 15px 1px #d2cabf;
+            background-color: #ffb90c;
+            margin: 10px auto;
+            transform: scale(30%);
+        }
+
+        .juan_hd {
+            float: left;
+            width: 300px;
+            height: 100%;
+            border-right: 1px dashed white;
+        }
+
+        .juan_bd {
+            float: left;
+            width: 100px;
+            height: 100%;
+        }
+
+        .ling {
+            float: left;
+            width: 104px;
+            background-color: #ffb90c;
+        }
+
+        .juan .p {
+            padding: 10px;
+            color: white;
+        }
+
+        .juan .price {
+            width: 410px;
+            height: 62px;
+            margin-left: 60px;
+            line-height: 65px;
+            font-size: 65px;
+            color: white;
+        }
+
+        .juan .youhui {
+            height: 21px;
+            color: white;
+            margin-left: 193px;
+            line-height: 35px;
+        }
+
+        .zi {
+            float: left;
+            width: 70px;
+            height: 35px;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            font-size: 16px;
+            border-radius: 19px 19px 19px 19px;
+            background-color: #9e4add;
+            margin: 55px 20px;
+        }
+
+        .color {
+            position: absolute;
+            top: -11px;
+            right: 100px;
+            height: 20px;
+            width: 20px;
+            border-radius: 100% 100% 0 0;
+            background-color: white;
+            transform: rotate(180deg);
+        }
+
+        .color1 {
+            position: absolute;
+            top: 132px;
+            right: 99px;
+            height: 20px;
+            width: 20px;
+            border-radius: 100% 100% 0 0;
+            background-color: white;
+        }
+
+        .juan::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-size: 4px 4px;
+            background-image: radial-gradient(circle at right, #fff3ed 2px, transparent 0);
+        }
+
+        .juan::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-size: 4px 4px;
+            background-image: radial-gradient(circle at left, #fff3ed 2px, transparent 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="juan">
+        <div class="color"></div>
+        <div class="color1"></div>
+        <div class="juan_hd">
+            <div class="p">体育优惠券</div>
+            <div class="price"><strong>￥100</strong></div>
+            <div class="youhui"><strong>满两百减一百</strong></div>
+        </div>
+        <div class="juan_bd">
+            <div class="zi">领取</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

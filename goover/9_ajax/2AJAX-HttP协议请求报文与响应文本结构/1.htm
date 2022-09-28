@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    http协议
+    HTTP (hypertext transport protocol)协议 [超文本传输协议]  协议规定了浏览器和万维服网务器之间相互通信规则
+    协议就是一种约定 规则
+    主要约定了两块内容
+
+    第一部分是请求  请求报文
+    重点是格式与参数
+    1请求行        1是请求类型 常见GET POST  2第二个是一个url的路径  /后面    3http协议的一个版本 有1.0,1.1,2.0
+    2请求头       Post：atguigu.com
+                 Cookie：name=guigu
+                 Content-type: application/x-www-form-url 名字冒号空格加值
+    3是一个空行  是固定的必须得有的
+    4是请求体    可以有内容 也可以没有内容  GET请求 请求体可以为空  如果是POST 请求体可以不为空
+                username=admin&password=admin
+
+                发生请求时 get就是单纯的读取数据 相对的POST可用于读取（一般不会这样用）同样的可用于操作
+                get和post的区别在于，get请求没法传数据，单纯地读取一个接口提供的资源，
+                相对的post会传入一定的数据提供后台进行一定的操作
+
+
+    第二部分是响应  响应报文
+    行           3部分 1协议版本  http/1.1    2响应状态码 200  3响应状态字符串 OK
+    头             格式跟请求头一样  Content-Type: text/html;charset=UTF-8
+                                   Content-length: 2048
+                                   COntent-encoding: gzip
+                                   这是对响应体做一些描述 比如类型是什么 长度多少  压缩方式是哪种
+    空行  必须有
+    体    这是主要响应结果
+                <!-- <html>
+                    <head></head>
+                    <body>
+                        <h1>尚硅谷</h1>
+                    </body>
+                </html> -->
+在chrom浏览器如何查看 请求报文 与响应报文
+
+</body>
+</html>

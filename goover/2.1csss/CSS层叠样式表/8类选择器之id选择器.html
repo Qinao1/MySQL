@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+        <meta charset="UTF-8">
+        <title>基础选择器之id选择器</title>
+        <style>
+            #nav {
+                color: pink;
+            }
+        </style>
+</head>
+<body>
+     <!-- id选择器可以为标有 特定 id的html元素指定特定的样式 -->
+     <!-- HTML元素以id属性来设置id选择器,css中的id选择器以   #  来定义 -->
+     <!-- 语法
+        #id名 {
+            属性1;属性值1
+            ....
+        }
+        eg：将id为nav元素中的内容设置为红色
+        #nav {
+            color： red；
+        }
+     -->
+     <!-- id选择器的口诀：样式是通过 # 来定义的，结构是通过 id 来调用的，只能调用一次，别人就不能使用了 -->
+     <div id="nav">亚瑟.莫汉德</div>
+     <!-- <div id="nav">亚瑟.莫汉德</div>
+        id是一次性的再用就不允许了，eg：姓名是类选择器。id是身份证号是唯一的 id选择器和类选择器最大的不同是  在于使用次数上
+        类选择器在修改样式中用的比较多，id选择器一般用于页面的唯一元素上，经常和JavasCript搭配使用
+     -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left,
+        .right {
+            height: 300px;
+            width: 200px;
+            background-color: pink;
+            float: right;
+        }
+        .left {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- 虽然转换成行内块元素可以实现一行显示，但他们之间会有较大的空白空隙，很难控制 -->
+    <!-- 有很多的布局效果，标准流没有办法完成，此时就可以利用浮动完成布局，因为浮动可以改变元素标签默认的排序方式 -->
+    <!-- 浮动最典型的应用，可以让多个块级元素，一行内，排列显示 -->
+    <!-- 网页布局，第一准则：多个块级元素纵向排列找标准流，多个块级元素，横向排列，找浮动 -->
+    <!-- float属性用于创建浮动框，将其移动到一边，直到右边缘，触及包含块或另一个浮动框的边缘 -->
+    <!-- 选择器 float：属性值； -->
+    <!-- 属性值                        描述 -->
+    <!-- none                    元素不浮动 -->
+    <!-- left                   元素像左浮动 -->
+    <!-- right                  元素向右浮动 -->
+    <div class="left">1</div>
+    <div class="right">2</div>
+</body>
+</html>

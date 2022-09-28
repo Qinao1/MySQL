@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+    我是body的文字
+    <!-- 链式编程  是为了节省代码量 看起来更优雅 -->
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function () {
+            // 隐式迭代 给所有的按钮循环绑定了点击事件
+            $("button").click(function(){
+                // 当前文字颜色变成红色
+                // $(this).css("color","red");
+                // 让其余姐妹不变色
+                // $(this).siblings().css("color","");
+                // 链式编程
+                // $(this).css("color","red").siblings().css("color","");
+                // 我的颜色为红色 我的兄弟的颜色为空
+                // $(this).css('color','').siblings().css("color","red");
+                // 我的兄弟变为红色 我本身不变色
+                $(this).siblings().parent().css('color','blue');
+                // 最后是给我的兄弟的爸爸 body 变化颜色
+                // 使用链式编程一定注意是哪个对象执行样式
+            })
+        })
+    </script>
+</body>
+
+</html>

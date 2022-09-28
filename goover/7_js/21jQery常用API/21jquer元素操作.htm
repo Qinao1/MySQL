@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 主要是遍历  创建   添加  删除元素 操作
+    jquery 隐式迭代    是 对同一类元素做了相同的操作     如果想要给同一类元素做不同的操作    就需要用到遍历 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function () {
+            // $("div").css("color","red");
+            //each （）方法  遍历 匹配的每一个元素 主要做dom处理  each每一个
+            // 里面的回调函数 有两个参数   index是每一个元素的索引号  demele是每一个dom元素对象  不是jquery对象
+            // 想要使用jquery方法需要转换
+            var sum = 0;
+            var arr = ["red", "green", "blue"];
+            $("div").each(function (i, domEle) {
+                // 回调函数第一个是索引号  可以自己指定索引号名称 i  也行
+                // console.log(index);
+                // 回调函数 第二个参数 一定是  dom元素对象 也是自己命名的
+                // console.log(domEle);
+                // domEle.css("color","red"); dom对象没有css方法
+                // $(domEle).css("color","blue")
+                $(domEle).css("color", arr[i]);
+                sum += parseFloat($(domEle).text());//转换成数字型
+            })
+            console.log(sum);
+            // $.each()方法遍历元素     主要用于遍历数据 处理数据
+            // $.each($("div"), function (i, ele) {
+            //     console.log(i);
+            //     console.log(ele);
+            // })
+            $.each(arr,function(i,ele){
+                console.log(i);
+                console.log(ele);
+            });
+
+            $.each({
+                name:18,
+                age:"andy"
+            },function(i,ele){
+                console.log(i);//输出的是属性名
+                console.log(ele);//输出的是属性值
+            })
+        })
+    </script>
+</body>
+
+</html>

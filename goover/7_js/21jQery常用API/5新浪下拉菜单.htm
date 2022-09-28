@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin: 200px auto;
+            width: 200px;
+            height: 20px;
+        }
+        .nav li {
+            width: 50px;
+        }
+
+        .nav li ul {
+            display: none;
+        }
+
+        .nav li ul li {
+            border: 1px solid orange;
+            border-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="">私信</a></li>
+                <li><a href="">私信1</a></li>
+                <li><a href="">私信2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="">私信</a></li>
+                <li><a href="">私信1</a></li>
+                <li><a href="">私信2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="">私信</a></li>
+                <li><a href="">私信1</a></li>
+                <li><a href="">私信2</a></li>
+            </ul>
+        </li>
+
+        <script>
+            $(function () {
+                // //鼠标经过
+                // $(".nav>li").mousemove(function () {
+                //     // $(this)   jQuery  当前元素  this 不要加引号
+                //     // show()显示元素   hide()隐藏元素
+                //     $(this).children("ul").slideDown(200);
+                // })
+                // //鼠标离开
+                // $(".nav>li").mouseout(function () {
+                //     $(this).children("ul").slideUp(200);
+                // })
+                // 1事件切换 hover 就是鼠标经过 和离开的复合写法
+                // $(".nav>li").hover(function(){
+                //     // 鼠标经过
+                //     $(this).children("ul").slideDown(200);
+                // },function(){
+                //     // 鼠标离开
+                //     $(this).children("ul").slideUp(200);
+                // })
+                // 2事件切换  hover  如果只写一个函数   那么鼠标经过和鼠标离开都会触发这个函数
+                $(".nav>li").hover(function(){
+                    //stop（）必须写在动画的前面
+                    $(this).children("ul").stop().slideToggle();
+                })
+            })
+        </script>
+</body>
+
+</html>

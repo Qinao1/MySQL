@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>`</title>
+    <style>
+        /* * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        } */
+
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid red;
+            padding: 14px;
+        } */
+
+        /* p { */
+            /* width: 200px; */
+            /* height: 200px; */
+            /* background-color: pink; */
+            /* border: 10px solid red; */
+            /* padding: 14px; */
+            /* css3盒子模型  盒子最终的大小就是width的大小 */
+            /* box-sizing: border-box; */
+        /* } */
+
+        /* img { */
+            /* blur是一个函数，小括号里面数值越大，图片越模糊  注意数值要加px单位 */
+            /* filter: blur(15px); */
+        /* } */
+
+        /* img:hover {
+            filter: blur(0px);
+        } */
+        .father {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+        .son {
+            width: calc(100% - 30px);
+            height: 50px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>乔治</div> -->
+    <!-- css3可以通过box-sizing来指定盒模型  有两个值     即可指定为content-box，border-box   这样我们计算盒子的大小的方式就发生了改变 -->
+    <!-- 可以分为两种情况 -->
+    <!-- box-sizing：content-box  盒子大小为width+padding+border （以前默认的） -->
+    <!-- box-sizing：border-box   盒子大小为width -->
+    <!-- 如果盒子模型我们改为box-sizing：border-box 那么padding和border 就不会撑大盒子了（前提是padding和border不会超过width宽度） -->
+    <!-- <p></p> -->
+    <!-- css3的其他特性 -->
+    <!-- 1图片模糊
+    css3的滤镜filter
+    filter  css属性将模糊或颜色偏移等图形效果应用于元素
+    filter：函数（）eg：filter：blur（5px）    blur 模糊处理    数值越大 越模糊 -->
+    <!-- <img src="../tudou.png" alt=""> -->
+    <!-- 2计算盒子宽高 wdith：calc函数  calc是计算的意思
+    calc（）此函数让你在声明css属性值时执行一些计算
+    width：calc（100%-80px）
+    括号里面可以使用+-*/来进行计算 -->
+    <!-- 需求我们的子盒子 宽度  永远比父盒子小30px -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

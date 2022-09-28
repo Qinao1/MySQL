@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- html5新增的属性
+    属性          属性值              说明
+    required     required         拥有该属性，其内容不能为空
+    placeholder     提示文本        的提示信息，存在默认值将不显示
+    autofocus      antofocus       自动聚焦属性，页面加载完成自动聚焦到指定
+    autocomplete   off/on          当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项，默认已经打开
+                                  如autocomplete=on    关闭autocomplete=off  需要放在内，同时加上name属性，同时提交成
+    multiple         multiple      可以多选文件提交
+    -->
+    <form action="">
+        <input type="search" required="required" placeholder="pink" autofocus="autofocus"> 
+        <input type="submit" value="提交" autocomplete="off">
+        <input type="file" multiple="multiple">
+   </form>
+</body>
+</html>

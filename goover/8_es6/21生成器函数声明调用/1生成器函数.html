@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 生成器其实就是一个特殊函数
+        // 异步编程 纯回调函数    node  fa  ajax  mongobd
+        function* gen(){
+            // console.log(111);
+            yield '一只没有耳朵'  //yield 关键字用来暂停和恢复一个生成器函数（(function* 或遗留的生成器函数 (en-US)）
+            // 可以认为是函数代码的分隔符，可以把代码分成几块  三个分隔符，产生4块代码
+            // console.log(222);
+            yield '一只没有尾巴'
+            // console.log(333);
+            yield '一只没有尾'
+            // console.log('hello');
+            // console.log(444);
+        }
+        let iterator=gen();
+        // console.log(iterator);
+        console.log(iterator.next()); 
+        console.log(iterator.next()); 
+        console.log(iterator.next()); 
+        console.log(iterator.next()); 
+        
+
+        // 遍历
+        for(let v of gen()){
+            console.log(v);  //返回的是yield 后面的字面量或者表达式
+        }
+    </script>
+</body>
+</html>

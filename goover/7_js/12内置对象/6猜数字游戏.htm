@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //程序随机生成一个1~10之间的数字  并让用户输入一个数字
+        // 1如果大于该数字  就提示数字大了，继续猜
+        // 2如果小于该数字  就提示数字小了，继续猜
+        // 3如果等于该数字  就提示猜对了，结束程序
+        // function getRandom(min, max) {
+        //     return Math.floor(Math.random() * (max - min+1)) + min;
+        // }
+        // var random=getRandom(1,9);
+        // while (true) {//死循环
+        //     var num=prompt('输入1~9之间的数');
+        //     if (num>random) {
+        //         alert('你猜大了');
+        //     }else if (num<random){
+        //         alert('你猜小了');
+        //     }else{
+        //         alert('你猜对了');
+        //         break;//退出整个循环程序
+        //     }
+        // }
+        //要求用户猜  1~50之间的数字 但是只有10次猜的机会function getRandom(min, max) {
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var num = getRandom(1, 50);
+        for (var i = 9; i >= 0; i--) {
+            var psnum = prompt('请输入1~50的数字');
+            if (i < 0) {
+                alert('你没机会了！')
+                break;
+            }
+            if (parseInt(psnum) > num) {
+                alert('你猜大了，还有' + i + '次机会')
+            } else if (parseInt(psnum) < num) {
+                alert('你猜小了，还有' + i + '次机会')
+            } else if(parseInt(psnum)==num) {
+                alert('恭喜你，猜对了');
+                break;
+            }else{
+                alert('非法输入');
+            }
+            
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

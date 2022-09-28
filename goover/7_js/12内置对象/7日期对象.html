@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Date()日期对象   是一个构造函数  必须使用new  来调用日期对象
+        var arr=new Array();//创建一个数组对象
+        var obj=new Object();//创建了一个对象实例
+        //使用Data   如果没有参数，返回当前系统的当前时间
+        var date=new Date();
+        console.log(date);
+        //参数常用写法 数字型   2022,08,01  或者是字符串型   '2022—08-01 14:31:00'
+        var date1=new Date(2022,08,01);
+        console.log(date1);//返回的是9月不是8月
+        var date2=new Date('2022-08-01 00:00:02');
+        console.log(date2);
+        // date对象和math对象不一样，它是一个构造函数  所以需要实例化后才能用
+        // date实例主要用来处理日期和时间
+        // date（）方法的使用
+        // 1获取当前时间  必须实例化
+        // 2data构造函数的参数
+        // 如果里面有时间就返回参数里面的时间，eg：字符串型为'2022-08-01'可以写成new Data（'2022-08-01'）
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

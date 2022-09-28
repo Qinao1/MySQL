@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式转换</title>
+    <style>
+        a {
+            width: 200px;
+            height: 30PX;
+            display: block;
+            background-color: #333;
+        }
+        div {
+            /* width: 300px;
+            height: 20px; */
+            display: inline;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 特殊情况下，我们需要元素模块的转换，简单理解：一个模式的元素需要另一种模式的特性
+    比如想要增加a链接的触发范围 
+    转换为块元素                                           display是显示的意思block是块
+    display：block；
+    转换为行内元素
+    display：inline；
+    转换为行内块元素
+    display： inline—block
+    -->
+    <a href="#">pink老师</a>
+    <a href="#">pink老师</a>
+    <div>adsa</div>
+    <div>adsa</div>
+</body>
+</html>

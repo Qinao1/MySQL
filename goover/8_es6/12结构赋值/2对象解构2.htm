@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    解构赋值 按照·一定模式，将数组中或对象中的值 提取出来 赋值给另外的变量
+    let {name:myName,age:myAge}=person; myName myAge属于别名
+    console.log(myName);//zhangsan
+    console.log(myAge);//20
+    <script>
+        // 对象解构允许我们使用变量的名字 匹配对象的属性 匹配成功 将对象属性的值 赋值给变量
+        let person = { name: 'lishi', age: 15, sex: '男' };
+        let { name: Myname, age: Myage, sex: Mysex } = person;
+        console.log(Myname);
+        console.log(Myage);
+        console.log(Mysex);
+    </script>
+</body>
+
+</html>

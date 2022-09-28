@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 常见元素的属性操作 -->
+    <!-- 1innerText innerHTML改变元素内容
+    2src  href
+    3id  alt title -->
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <img src="../liu.jpg" alt="" title="刘德华">
+    <script>
+        //修改元素属性 src
+        //1获取元素
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var img = document.querySelector('img');
+        //注册事件
+        zxy.onclick = function () {
+            img.src = '../zhang.jpg';
+            img.title = '张学友';
+        }
+        ldh.onclick = function () {
+            img.src = '../liu.jpg';
+            img.title = '刘德华';
+        }
+    </script>
+</body>
+
+</html>

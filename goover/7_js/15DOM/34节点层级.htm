@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 利用dom树可以把节点分为不同的层级关系   常见的是父子兄层级关系 -->
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+    </ol>
+    <div class="box">
+        <div class="erweima">x</div>
+    </div>
+    <script>
+        var erweima=document.querySelector('.erweima');
+        // var box=document.querySelector('.box');
+        //得到的是离元素最近的节点 如果找不到父节点就返回为空null
+        // pareneNode父节点
+        console.log(erweima.parentNode);
+        // 子节点
+        // childNodes    所有的子节点  包含元素节点  文本节点等
+        var ul=document.querySelector('ul');
+        var lis=ul.querySelectorAll('li');
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+        // 2children 获取所有的子元素节点  也是实际开发常用的
+        console.log(ul.children);
+
+        // 第一个子元素和最后一个子元素
+        var ol=document.querySelector('ol');
+        //first  获取的是第一个子节点  不管是文本节点 还是元素节点
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        // 2
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+        // ie9以上支持
+        // 3 实际开发的写法    既没有兼容性问题 又返回第一个子元素
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.children.length-1]);
+    </script>
+</body>
+</html>

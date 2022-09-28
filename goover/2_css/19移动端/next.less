@@ -1,0 +1,24 @@
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    // less嵌套，子元素样式，直接写到父元素里面就可以了
+    /* 如果遇到（交集，伪类，伪元素选择器）
+    内层选择器的前面没有&符号 则它被解析成父选择器的后代
+    如果有&符号 他就被解析成父元素自身或父元素的伪类 */
+    a {
+        color: red;
+        如果有伪类，伪元素 我们内层选择器的前面加&
+        &:hover{
+            color: blue;
+        }
+    }
+}
+.nav {
+    .log{
+        color: green;
+    }
+    &::before{
+        content: '';
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        //声明变量
+        let a;
+        let b,c,d;
+        let e=100;
+        let f=534, g='iloveyou',h=[];
+
+        //1.let声明变量的特性     变量不能重复声明
+        // let star='罗志祥';
+        // let star='小猪';
+        // 担心变量被污染
+
+        //2.块级作用域  全局   函数   eval
+        // if else while  for 
+        // {
+        //     let gril='周阳村';
+        // }
+        // console.log(girl);
+        // 3不存在变量提升
+        // console.log(song);
+        // let song='恋爱大人';
+
+        //不影响作用域链
+        {
+            let sl='qeqw';
+
+            function fn() {
+                console.log(sl);
+            }
+            fn();
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            list-style: none;
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+            margin-left: -1px;
+        }
+        /* ul li:hover {
+            如果盒子没有定位添加相对定位即可
+            position: relative;
+            border: 1px solid red;
+        } */
+        ul li:hover {
+            z-index: 1;
+            position: relative;
+            border: 1px solid red;
+        }
+           
+    </style>
+</head>
+<body>
+    <!-- 1让每个盒子magin往左移动-1px正好压住相邻盒子的边框
+    2鼠标经过某个盒子的时候，提高盒子的层级即可，（如果有定位没有定位，则加相对定位（保留位置）如果有定位！！！！！！！！！加
+    z-index -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+</body>
+</html>

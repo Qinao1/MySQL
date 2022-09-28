@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border-collapse: collapse;
+        }
+
+        .Commodity_management {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .left {
+            width: 250px;
+            height: 639px;
+            color: #fff;
+            padding-left: 25px;
+            background-color: #545c64;
+        }
+
+        .left h2 {
+            display: block;
+            width: 100%;
+            height: 65px;
+            font-weight: 400;
+            line-height: 65px;
+        }
+
+        .left ul li {
+            height: 44px;
+            line-height: 44px;
+            font-size: 20px;
+        }
+
+        .left .color {
+            color: #bdba4b;
+        }
+
+        .right {
+            height: 656px;
+            width: 1078px;
+        }
+
+        .right .r_header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-left: 1px;
+
+            width: 1078px;
+            height: 64px;
+            line-height: 64px;
+            color: #000000;
+            background-color: #666666;
+        }
+
+        .user_portrait {
+            width: 64px;
+            height: 64px;
+            margin-right: 20px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+        }
+
+        .user_portrait img {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+
+        }
+
+        .r_body {
+            padding-left: 30px;
+            padding-right: 122px;
+        }
+
+        .r_bheader ul {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-top: 20px;
+        }
+
+        .r_bheader ul li {
+
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .r_bheader .color {
+            color: #d7000d;
+        }
+
+        .r_bsearch {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            position: relative;
+            height: 50px;
+            margin: 15px 0px;
+        }
+
+        .r_bsearch input {
+            width: 300px;
+            height: 30px;
+
+        }
+
+        .r_bsearch button {
+            width: 150px;
+            height: 100%;
+            background-color: #67c23a;
+            color: #fff;
+            font-size: 20px;
+            border: transparent;
+            border-radius: 5px;
+        }
+
+        .r_bsearch button:hover {
+            cursor: pointer;
+        }
+
+        .r_bsearch form {
+            display: none;
+            position: absolute;
+            top: 106px;
+            left: 250px;
+
+            width: 400px;
+            height: 300px;
+
+            background-color: pink;
+        }
+
+        .r_bsearch form .power {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 20px;
+            line-height: 16px;
+        }
+
+        .r_bsearch form .power input {
+            width: 40px;
+            height: 17px;
+            border: 1px solid #ebeef5;
+        }
+
+        .r_bbody {
+            height: 400px;
+        }
+
+        .r_bbody thead {
+            height: 40px;
+        }
+
+        /* .r_bbody tbody {
+            display: flex;
+            flex-flow: row wrap;
+        } */
+        .r_bbody th {
+            width: 183px;
+            height: 100%;
+            text-align: left;
+            line-height: 15px;
+            color: #909399;
+        }
+
+        .r_bbody tr td {
+            width: 100px;
+            height: 30px;
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #606266;
+            border-bottom: 1px solid #ebeef5;
+            border-top: 1px solid #ebeef5;
+
+        }
+
+        .r_bbody tr td .first {
+            background-color: #67c23a;
+        }
+
+        .r_bbody tr td .last {
+            background-color: #f56c6c;
+        }
+
+        .r_bbody tr td a {
+            display: inline-block;
+            text-decoration: none;
+
+            width: 89px;
+            height: 24px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        .r_bbody .information {
+            display: none;
+            position: absolute;
+            width: 500px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* .aaaa {
+            margin-left: -280px;
+            margin-top: -7px;
+        }
+        .xianshi {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        } */
+        .bg {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Commodity_management">
+        <div class="left">
+            <h2>商品后台管理系统</h2>
+            <ul>
+                <li>主页</li>
+                <li>商品管理</li>
+                <li class="user color">用户管理</li>
+                <li>商家列表</li>
+                <li>其他</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="r_header">
+                <div class="set">设置</div>
+                <div class="user_portrait"><img src="img/tou.jpg" alt=""></div>
+            </div>
+            <div class="r_body">
+                <div class="r_bheader">
+                    <ul>
+                        <li class="color">首页</li>
+                        <li>/商品管理</li>
+                        <li>/用户管理</li>
+                        <li>/商家列表</li>
+                        <li>/其他</li>
+                    </ul>
+                </div>
+                <div class="r_bsearch">
+                    <input type="text" placeholder="请输入用户名" class="chaxun">
+                    <button class="aaaa">点击查询</button>
+                    <div class="xianshi"></div>
+                    <button class="add">新增用户&nbsp;+</button>
+                    <form action="" class="">
+                        <input type="text" placeholder="请输入用户名" class="name">
+                        <input type="text" placeholder="请输入地址" class="address">
+                        <input type="text" placeholder="输入注册时间" class="date">
+                        <div class="power">
+                            用户权限：
+                            <input type="radio" name="1" value="普通用户" class="power1">普通用户
+                            <input type="radio" name="1" value="VIP" class="power2">VIP
+                            <input type="radio" name="1" value="SVIP" class="power3">SVIP
+                        </div>
+                        <span class="button">立即创建</span>
+                        <span class="button1">取消</span>
+                    </form>
+                </div>
+                <div class="r_bbody">
+                    <div class="information">
+                        姓名：
+                        <div class="personal_name"></div>
+                        注册日期：
+                        <div class="person_age"></div>
+                        地址：
+                        <div class="person_occupation"></div>
+                        权限：
+                        <div class="person_power"></div>
+                        <button class="quxiao">取消</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>注册日期</th>
+                                <th>姓名</th>
+                                <th>地址</th>
+                                <th>权限</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var person = [];
+        // 添加行
+        var tbody = document.querySelector('tbody');
+        diao(person);
+        function diao(person) {
+           tbody.innerHTML='';
+            for (var i = 0; i < person.length; i++) {
+                var tr = document.createElement('tr');
+                tbody.appendChild(tr);
+
+                for (var k in person[i]) {
+                    var td = document.createElement('td');
+                    td.innerHTML = person[i][k];
+                    tr.appendChild(td);
+                }
+                var see = document.createElement('td');
+                see.innerHTML = '<a href="javascript:;" class="first">查看用户</a>&nbsp<a href="javascript:;" class="last">删除用户</a>';
+                tr.appendChild(see);
+            }
+        }
+        // 显示，隐藏表单
+        var add = document.querySelector('.add');
+        var form = document.querySelector('form')
+        add.addEventListener('click', function () {
+            form.style.display = 'block';
+        })
+        var cancel = document.querySelector('.button1');
+        cancel.addEventListener('click', function () {
+            form.style.display = 'none';
+        })
+        //添加数组
+        var nam = document.querySelector('.name');
+        var addres = document.querySelector('.address');
+        var dat = document.querySelector('.date');
+        var power1 = document.querySelector('.power1');
+        var power2 = document.querySelector('.power2');
+        var power3 = document.querySelector('.power3');
+        var submit = document.querySelector('.button');
+        var chaxun = document.querySelector('.chaxun');
+        // 查询数组
+        chaxun.addEventListener('change', function (e) {
+            // console.log(e.keyCode);
+            var en = [];
+            person.some(function (value) {
+                // console.log(value);
+                if (value.name === chaxun.value) {
+                    en.push(value);
+                    return true;  //return 后面必须写true
+                };
+            });
+            
+            if (chaxun.value ===''){
+                diao(person);
+            }
+            diao(en);
+           shanchu();
+           chaa();
+        })
+         // 删除功能
+         function shanchu(){
+         var out = document.querySelectorAll('.last');
+            for (var i = 0; i < out.length; i++) {
+                out[i].onclick = function () {
+                    tbody.removeChild(this.parentNode.parentNode)
+                }
+            }
+        }
+        //查看功能
+        function chaa(){
+        var look = document.querySelectorAll('.first');
+            var information = document.querySelector('.information');
+            var quxiao = document.querySelector('.quxiao');
+            var personal_name = document.querySelector('.personal_name');
+            var person_age = document.querySelector('.person_age');
+            var person_occupation = document.querySelector('.person_occupation');
+            var person_power = document.querySelector('.person_power');
+            // console.log(look);
+            for (var i = 0; i < look.length; i++) {
+                look[i].onclick = function () {
+                    // className='bg';
+                    information.style.display = 'block';
+                    personal_name.innerHTML = this.parentNode.parentNode.childNodes[1].innerHTML;
+                    person_age.innerHTML = this.parentNode.parentNode.childNodes[0].innerHTML;
+                    person_occupation.innerHTML = this.parentNode.parentNode.childNodes[2].innerHTML;
+                    person_power.innerHTML = this.parentNode.parentNode.childNodes[3].innerHTML;
+                }
+            }
+            quxiao.addEventListener('click', function () {
+                information.style.display = 'none';
+            })
+        }
+        submit.addEventListener('click', function () {
+            // 上传表单里面的值
+
+            if (power1.checked) {
+                power = power1.value
+            } else if (power2.checked) {
+                power = power2.value
+            } else {
+                power = power3.value
+            }
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDay();
+            var day = date.getDay();
+            dates = year + '年' + month + '月' + dates + '日';
+
+            person.unshift({
+                date: dates,
+                name: nam.value,
+                address: addres.value,
+                power: power
+            })
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+
+            j = 0;
+            for (var k in person[j]) {
+
+                var td = document.createElement('td');
+                td.innerHTML = person[j][k];
+
+                tr.appendChild(td);
+            }
+            j++;
+            // }
+            var see = document.createElement('td');
+            see.innerHTML = '<a href="javascript:;" class="first">查看用户</a>&nbsp<a href="javascript:;" class="last">删除用户</a>';
+            tr.appendChild(see);
+            shanchu();
+            chaa();
+           
+        })
+        var cha = document.querySelector('.aaaa');
+        var chaxun = document.querySelector('.chaxun');
+        var xianshi = document.querySelector('.xianshi');
+        cha.addEventListener('click', function () {
+            xianshi.style.display = 'block';
+        })
+    </script>
+</body>
+
+</html>

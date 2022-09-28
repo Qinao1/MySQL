@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 可以通过js修改元素的大小   颜色  位置等样式 -->
+    <!-- element.style   行内样式操作
+    element.className 类名样式操作 -->
+    <div></div>
+    <script>
+        //获取元素
+        var div=document.querySelector('div');
+        //注册事件 处理程序
+        div.onclick =function(){
+            // div.style     采用驼峰命名法    js修改style样式操作    产生的是行内样式   比css里面的权重高
+            this.style.backgroundColor='purple';
+            this.style.width='250px';
+        }
+    </script>
+</body>
+</html>

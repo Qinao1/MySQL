@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 在经典的OOP都语言中（如java） 都存在类的概念 类就是对象的模板 对象就是类的实例 -->
+    <!-- 但在es6之前 js中 并没有引入类的概念 -->
+    <!-- 构造函数 是一种特殊的函数 主要用来初始化对象 即为对象成员变量赋初始值 它总与new一起使用  我们
+    可以把对象中的一些公共属性 和方法抽取出来  然后封装到这个函数里面
+    new 在执行时 会做四件事
+    1在内存中 创建一个新的空对象
+    2让this指向这个新的对象
+    3执行构造函数里面的代码  给这个对象添加属性和方法
+    4返回这个新对象（所以构造函数里面不需要return -->
+    <!-- 构造函数中的属性和方法 我们称为成员   成员可以添加 -->
+    <!-- 构造函数很好 但是存在浪费内存的问题 -->
+
+    <script>
+        // 利用new Object（）创建对象
+        var obj1 = new Object();
+        // 利用字面量，创建对象
+        var obj2 = {};
+        // 利用构造函数 创建对象
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            this.sing = function () {
+                console.log("我会唱歌");
+            }
+        }
+        var ldh = new Star('ldh', 18);
+        var zxy = new Star('张学友', 18);
+        // console.log(ldh);
+        // ldh.sing();
+        // zxy.sing();
+        //实例成员就是构造函数内部通过this添加的成员 uname age sing 就是实例成员
+        // 实例成员 只能通过实例化的对象来访问
+        // console.log(ldh.uname);
+        // ldh.sing();
+        // console.log(Star.uname); //不可以通过构造函数来访问实例成员
+        // 2静态成员 在构造函数本身上添加成员  sex就是静态成员
+        Star.sex = '男';
+        // 静态成员 只能通过构造函数来访问
+        // console.log(Star.sex);
+        // console.log(ldh.sex);//不能通过 对象来访问
+        console.log(ldh.sing === zxy.sing);
+    </script>
+</body>
+
+</html>

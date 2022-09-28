@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    location是window下的一个属性
+    window对象给我们提供了一个locattion属性，用于获取或设置窗体的URL并且可以用于解析URL
+    因为这个属性返回的是一个对象  所以我们将这个属性也称为location对象
+    URL就是网址
+    URL  统一资源定位符（Uniform Resource Locator，URL）是互联网是的标准资源地址。互联网是的每一个文件都有一个唯一的URL
+    它包含的信息指出文件的位置以及浏览器应该怎么处理它
+    URL一般的语法格式为
+    protocol://host[:port]/path[?query]#fragment
+    http://www.itcast.cn/index.html?name=andy&age=18#link  这个是实例
+     组成                 说明
+     protocol          通信协议常用的http,ftp,maito等
+     host              主机(域名) www.itheima.com
+     port               端口号可选，省略时使用方案的默认端口如http的默认端口为80
+     path               路径由零或多个/符号隔开的字符串，一般用来表示主机上的一个目录或文件地址
+     query              参数以键值对的形式，通过&符号分隔开来
+     fragment           片段#后面内容常见于链接锚点
+
+     location对象的属性
+     location对象属性                         返回值
+     location.href                        获取或者设置整个URL
+     location. host                       返回主机(域名) www.itheima.com
+     location.port                        返回端口号如果未写返回空字符串
+     location.pathname                    返回路径
+     ocation. search                      返回参数
+     location.hash                        返回片段 #后面内容  常见于链接  锚点
+     重点记住 
+      location.href  返回的是整个URL地址
+     location.search   返回的是参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+l
+</body>
+</html>

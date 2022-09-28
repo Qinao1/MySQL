@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝 flexible.js源码分析</title>
+    <script src="7淘宝flexbleJS源码分析之核心原理.js"></script>
+    
+</head>
+
+<body>
+    <!-- 立即执行函数（function（）{}）（） -->
+    <!-- 主要作用，  创建一个独立的作用域 -->
+    <!-- <script>
+        //立即执行函数  不需要调用，立马能够自己执行的函数
+        function fn() {
+            console.log(1);
+        };
+        fn();
+        //2写法  也可以传递参数进来
+        // (function(){})()       || 或者(function(){}())
+        (function (a, b) {
+            console.log(2);
+            console.log(a + b);
+            var num = 10;
+        })(1, 2);//第二个小括号可以看做是调用函数
+        (function sum(a, b) {
+            console.log(a + b);
+            var num = 10;//局部变量
+        }(2, 3))
+        //立即执行函数，最大的作用就是，独立创建了一个作用域   里面所有的变量都是局部变量，不会有命名冲突的情况
+          console.log(window.devicePixelRatio);
+    </script> -->
+    <a href="http://www.baidu.com">链接</a>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    es6引入了一种新的数据类型 表示独一无二的值 它是js的第七种语言 是一种类似于字符串的数据类型
+    特点
+    SYmbol的值是唯一的 用来解决命名冲突问题
+    symbol值,不能与其他数据进行运算
+    symbol 定义的对象属性,不能使用for in 循环遍历 但是可以用Reflect.ownKeys 来获取对象的所有键名
+    <script>
+        let s=Symbol();
+        console.log(s, typeof s);
+        let s2=Symbol('dsafds');//里面的值是一个描述
+        let s3=Symbol('sda');
+        // Symbol.for()创建
+        let s4=Symbol.for('asd');//这是函数对象
+        let s5=Symbol.for('asd');//这是函数对象
+        console.log(s4===s5);
+        // 不能与其他数据进行运算
+        // let result=s+100;
+        // let result=s>100;
+        // let result=s+'100';
+
+        // 字符串，数字，布尔值，null undefined Symbol 对象
+    </script>
+</body>
+
+</html>

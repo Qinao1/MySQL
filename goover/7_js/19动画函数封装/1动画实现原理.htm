@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 核心原理 通过定时器steinterval（）不断移动盒子位置 -->
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+
+        var timer = setInterval(function () {
+            if (div.offsetLeft >= 400) {
+                //停止动画  本质是停止定时器
+                clearInterval(timer);
+            }else {
+                div.style.left = div.offsetLeft + 1 + 'px';
+            }
+           
+        }, 30)
+    </script>
+</body>
+
+</html>

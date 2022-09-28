@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name='The Window';
+        var obj={
+            name:"My Object",
+            getNameFunc:function(){
+                return function(){
+                    return this.name;
+                }
+            }
+        }
+        console.log(obj.getNameFunc()());
+
+        // var f=obj.getNameFunc();   
+        // // 类似于
+        // var f=function(){
+        //             return this.name;
+        // }
+        // f();
+        // // 相当于
+        // function(){return this.name;}(); //立即执行函数，的this指向window
+
+        var name='The Window';
+        var obj={
+            name:"My Object",
+            getNameFunc:function(){
+                var that=this;
+                return function(){
+                    return this.name;
+                }
+            }
+        }
+        console.log(obj.getNameFunc()());
+        var f=obj.getNameFunc();
+        var f=function(){
+                    return this.name;
+                }
+                f();
+    </script>
+</body>
+</html>

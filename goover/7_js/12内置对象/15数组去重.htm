@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组去重
+        // var arr=['c','c','b','c','a','z','a','d','d','c','f','s','f'];
+        // 封装一个去重的函数
+        function unique(arr) {
+            var newarr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newarr.indexOf(arr[i]) === -1) {
+                    newarr.push(arr[i]);
+                }
+            }
+            return newarr;
+        }
+        var deom = unique(['c', 'c', 'b', 'c', 'a', 'z', 'a', 'd', 'd', 'c', 'f', 's', 'f']);
+        console.log(deom);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

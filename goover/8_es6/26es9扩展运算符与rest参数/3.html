@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则扩展-反向断言</title>
+</head>
+<body>
+    <script>
+        // 断言   可以根据目标的内容前边和后边做一个唯一性的识别
+        //声明字符串
+        let str='fsqf22234331fkdif你的弟弟是爱斯达克2222啦坎坷坷';
+        // 正向断言
+        // const reg=/\d+(?=啦)/;
+        // const result=reg.exec(str)
+        // 反向断言
+        const reg=/(?<=克)\d+/;
+        const result=reg.exec(str)
+        console.log(result);
+    </script>
+</body>
+</html>

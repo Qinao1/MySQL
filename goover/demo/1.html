@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/**
+* @param {number[]} nums
+* @param {number} target
+* @return {number[]}
+*/
+let nums=[2,7,11,15]
+let target=9
+var twoSum = function (nums, target) {
+//声明一个空数组数组用来接收
+ let a = [];
+ //循环数组nums
+ for (let i = 0; i < nums.length; i++) {
+  //判断数组里面有没有target减去当前正在循环的这个元素，
+   if (a[target - nums[i]] !== undefined) {
+      // 有的话，返回当前这个元素的索引值i与对应的a里面的数字
+     return [i, a[target - nums[i]]];
+   }
+   a[nums[i]] = i;
+ }
+return [];
+};
+console.log(twoSum(nums,target));
+// twoSum(nums,target)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .time {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 400px;
+            height: 300px;
+            margin: 100px auto;
+        }
+        .time1,
+        .time2,
+        .time3{
+            width: 50px;
+            height: 50px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            font-weight: 400;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time">
+        <div class="time1">1</div>
+        <div class="time2">2</div>
+        <div class="time3">3</div>
+    </div>
+    <script>
+        //获取元素
+        var hour=document.querySelector('.time1');//小时的黑色盒子
+        var minute=document.querySelector('.time2');//分钟的黑色盒子
+        var second=document.querySelector('.time3');//秒数的黑色盒子
+        var inputTime = +new Date('2022-8-13 19:00:00');//返回的是用户输入时间 总的毫秒数
+        // 第一次执行也有间隔毫秒数，因此刚刷新页面会有空白 最好采用封装函数的方式，这样可以先调用这个函数，防止刚开始刷新页面有空白
+        // 问题
+        countDown();//我们先调用一次这个函数  防止第一次页面刷新有空白
+        //开启定时器
+        setInterval(countDown,1000);
+        function countDown() {
+            var nowTime = +new Date();//返回的是当前时间总的毫秒数
+            var times = (inputTime - nowTime) / 1000;//times是剩余时间总的秒数
+            var h = parseInt(times / 60 / 60 % 24);//时
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML=h;//这就是把剩余的小时给黑色盒子
+            var m = parseInt(times / 60 % 60);//分
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML=m;//这就是把剩余的分钟给黑色盒子
+            var s = parseInt(times % 60);//当前的秒
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML=s;//这就是把剩余的秒数给黑色盒子
+        };
+    </script>
+</body>
+</html>

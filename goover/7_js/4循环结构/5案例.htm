@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 打印五行五列的星星
+        // var str = '';
+        // for (var i = 1; i <= 5; i++) {//外层循环负责打印五行
+        //     for (var j = 1; j <= 5; j++) {//里层循环负责一行打印五个星星
+        //         str += '☆';
+        //     }
+        //     //如果一行打印完毕五个星星就要另起一行，加  \n
+        //     str += '\n'
+        // }
+        // console.log(str);
+        // 打印n行n列的星星
+        // var str='';
+        // var row=prompt('打印几行星星');
+        // var cols=prompt('一行打印几个星星')
+        // for (var i=1;i<=row;i++){
+        //     for (var j=1;j<=cols;j++){
+        //         str +='★';
+        //     }
+        //     str +="\n"
+        // }
+        // console.log(str);
+        // 打印倒三角形
+        // var str = '';
+        // for (var i = 1; i <= 10; i++) {
+        //     for (var j = i; j <= 10; j++) {
+        //         str += '☆';
+        //     }
+        //     str += '\n'
+        // }
+        // console.log(str);
+        // 打印正三角形
+        var str = '';
+        for (var i = 1; i <= 10; i++) {
+            for (var j = 1; j <= i; j++) {
+                str += '☆';
+            }
+            str += '\n'
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

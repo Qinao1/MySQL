@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigInt</title>
+</head>
+<body>
+    <script>
+        //新的数据类型，大整形
+        // let n=521n;
+        // console.log(n,typeof(n));
+        // 函数，这个函数可以把普通的整数值，转化为一个大整形的值
+        let n=123;
+        console.log(BigInt(n));
+        // console.log(BigInt(1.2));
+        // 大数值运算
+        let max=Number.MAX_SAFE_INTEGER;//表示最大安全整数
+        console.log(max);
+        console.log(max+1);
+        console.log(max+2);
+
+        console.log(BigInt(max));
+        console.log(BigInt(max)+BigInt(1));
+        console.log(BigInt(max)+BigInt(2));
+        // 注意不能直接做运算 需要转换
+    </script>
+</body>
+</html>

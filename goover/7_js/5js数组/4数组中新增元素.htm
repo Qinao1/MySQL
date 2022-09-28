@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1新增数组元素  修改length长度
+        var arr = ['red', 'green', 'pink'];
+        console.log(arr.length);
+        arr.length = 5;//数组长度修改为了5，里面应该有五个元素
+        console.log(arr);
+        console.log(arr[3]);//undefined
+        // 2新增数组元素   修改索引号
+        var arr1 = ['red', 'green', 'pink'];
+        arr1[3] = 'blue';
+        console.log(arr1.length);
+        arr1[0] = 'yellow';//这里是替换原来的数组元素，没有叫追加，有了叫替换
+        console.log(arr1[0]);
+        arr1 = 'youdianyis';
+        console.log(arr1);//不要直接给数组名赋值，否者里面的数组元素都没有了
+        // 通过循环来增加数组
+        var arr4 = [];
+        for (var i = 0; i < 10; i++) {
+            // arr4=i;//不要直接给数组名赋值，否则以前的都没了
+            arr4[i] = i + 1;
+        }
+        console.log(arr4);
+        // 筛选数组、
+        // 方法1
+        var art = [2, 23, 3, 4, 6, 4, 3, 23, 6546, 456, 5, 65, 6, 5, 6, 56, 45, 6, 4565, , 65, 6];
+        var newart = [];
+        var j = 0;
+        for (var q = 0; q < art.length; q++) {
+            if (art[q] >= 10) {
+                //数组应该从0开始，依次递增
+                newart[j] = art[q];
+                j++;
+            }
+        }
+        console.log(newart);
+        // 方法2
+        var art = [2, 23, 3, 4, 6, 4, 3, 23, 6546, 456, 5, 65, 6, 5, 6, 56, 45, 6, 4565, , 65, 6];
+        var newart = [];
+        // 刚开始newlength就是0
+        for (var q = 0; q < art.length; q++) {
+            if (art[q] >= 10) {
+                //数组应该从0开始，依次递增
+                newart[newart.length] = art[q];
+            }
+        }
+        console.log(newart);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

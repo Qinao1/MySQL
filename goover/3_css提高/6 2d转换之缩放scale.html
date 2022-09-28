@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            background-color: pink;
+            /* transform-origin: left bottom; */
+        }
+
+        div:hover {
+            /* 小于1就是缩放 */
+            /* transform: scale(0.5,0.5); */
+            /* 宽放大2倍，高放大3倍 */
+            /* transform: scale(2,3); */
+            /* 等比例缩放 */
+            transform: scale(2);
+        }
+        ul li {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        ul li:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- scale 可以放大和缩小 只要给元素添加了这个属性就能控制它的放大和缩小
+    transform: scale（x，y）
+    transform: scale(1,1)宽和高都放大一倍    相当与没有放大
+    transform: scale（2,2）宽和高都放大了两倍
+    transform: scale（2）  只写一个参数，第二个参数和第一个参数一样，相对于scale（2，2)
+    transform: scale(0.5,0.5)缩小
+    scale缩放最大优势，  可以设置转换中心点缩放   默认以中心点缩放  而且不影响其他盒子！！ -->
+    <div></div>
+    <Ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </Ul>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  语法
+    class name{
+        class body
+    } 
+    创建实例
+    var xx=new name（）；
+    类必须使用new实例化对象
+    -->
+    <script>
+        //1.创建 类 class 创建一个   明星类
+        class Star {
+            constructor(uname,age) {
+                this.uname = uname;
+                this.age = age;
+            }
+            sing(song){
+                // 类里面的所有函数，不需要写function
+                // 多个函数 或方法之间，不需要添加逗号分割
+                // console.log('我唱歌');
+                console.log(this.uname+song);
+            }
+        }
+        // 利用类创建对象
+        var ldh = new Star('刘德华',18);
+        var zxy = new Star('谁看见的',20);
+        console.log(ldh);
+        console.log(zxy);
+        // 类 constructor构造函数
+        // constructor()方法是类的构造函数（默认方法）用于传递参数，返回实例对象 通过new 命令生成对象实例时
+        // 自动调用该方法，如果没有显示定义   类内部会自动给我们创建一个constructor()
+        ldh.sing('冰雨');
+        zxy.sing('李香兰');
+    </script>
+</body>
+
+</html>

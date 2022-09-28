@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            display: flex;
+            width: 50px;
+            height: 20px;
+            padding: 2px 10px;
+            line-height: 100%;
+            margin: 10px auto;
+            font-size: 14px;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            background-color: #fcfcfc;
+        }
+        .box1{
+            text-align: center;
+            line-height: 10px;
+        }
+        img {
+            margin-top: 5px;
+            height: 15px;
+            width: 15px;
+            text-align: center;
+            line-height: 15px;
+        }
+
+        .lis {
+            display: none;
+            margin-top: 2px;
+            margin-left: -10px;
+        }
+
+        .lis li {
+
+            width: 68px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+
+        }
+
+        .lis li:nth-child(1) {
+            border-left: 1px solid orange;
+            border-right: 1px solid orange;
+        }
+
+        .lis li:nth-child(2) {
+            border: 1px solid orange;
+        }
+
+        .lis li:nth-child(3) {
+            /* border-left: 1px solid orange;
+            border-right: 1px solid orange;
+            border-bottom: 1px solid orange; */
+            border: 1px solid orange;
+            border-top: 0;
+        }
+
+        .box:hover {
+            cursor: pointer;
+            background-color: #edeef0;
+        }
+
+        .box1:hover {
+            color: orange;
+        }
+
+        li:hover {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            微博
+            <span><img src="../xiala.png" alt=""></span>
+        </div>
+        <ul class="lis">
+            <li>私信</li>
+            <li>评论</li>
+            <li>@我</li>
+        </ul>
+    </div>
+
+    <script>
+        var box = document.querySelector('.box');
+        var lis = document.querySelector('.lis');
+        box.onmouseover = function () {
+            lis.style.display = 'block';
+        }
+        box.onmouseout = function () {
+            lis.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

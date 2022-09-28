@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1,写一个函数，用户输入任意两个数字的任意算数运算，（简单计算器小功能）并弹出运算后的结果
+        // var num1=prompt('请输入数字1');
+        // var num2=prompt('请输入符号');
+        // var num3=prompt('请输入数字2');
+        // function ruselt(num1, num2,num3) {
+        //     if (num2=='+') {
+        //         return parseFloat(num1)+parseFloat(num3);
+        //     }else if (num2=='-'){
+        //         return num1-num3;
+        //     }else if (num2=='*'){
+        //         return num1*num3;
+        //     }else if (num2=='/'){
+        //         return num1/num3;
+        //     }else{
+        //         alert('非法输入')
+        //     }
+        // }
+        // var re=ruselt(num1,num2,num3);
+        // alert(re);
+        // 2写一个函数，用户输入任意两个数的最大值，
+        // var num1 = prompt('请输入');
+        // var num2 = prompt('请输入');
+        // function max(num1, num2) {
+        //     if (parseFloat(num1) > parseFloat(num2)) {
+        //         return num1;
+        //     } else {
+        //         return num2;        
+        //     }
+        // }
+        // var da = max(num1, num2);
+        // alert(da);
+        // 3写一个函数，用户输入任意三个不同数字的最大值，
+        var num1 = prompt('请输入1');
+        var num2 = prompt('请输入2');
+        var num3 = prompt('请输入3');
+        function da(num1,num2,num3) {
+
+            if (parseFloat(num1) > parseFloat(num2) > parseFloat(num3)) {
+                return num1;
+            } else if (num2 > num1 > num3) {
+                return num2;
+            } else if (num3 > num2 > num1) {
+                return num3;
+            }
+            else {
+                return alert('非法输入');
+            }
+
+        }
+        var max = da(num1, num2, num3);
+        alert(max);
+
+
+        //4 写一个函数，用户输入一个数吗、，判断是否是素数，并返弹回（又叫质数，只能被2和自身整除的数）
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

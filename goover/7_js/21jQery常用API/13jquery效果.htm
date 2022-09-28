@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+<body>
+    <!-- jquery给我们封装了很多动画效果 最为常见的如下
+      显示隐藏     滑动             淡入淡出    自定义动画
+      show()     slideDown()     fadeln()     animate()
+      hide()     slideUP()       fadeOut()
+      toggle()   slideToggle()   fadeTo()
+      显示隐藏效果
+      show([speed],[easing],[fn])
+      显示参数
+      参数都可以省略  无动画直接显示
+      speed  三种预定速度之一的字符串（slow normal，or fast） 或者 表示动画时长的毫秒数值（如1000）
+      easing  (Optional)用来指定切换效果  默认是  swing 慢到块   可用参数  liner  匀速
+      fn：回调函数  在动画完成时执行函数   每个元素执行一次 -->
+      <button>显示</button>
+      <button>隐藏1</button>
+      <button>切换</button>
+      <div></div>
+      <script>
+        $(function(){
+            $("button").eq(0).click(function(){
+                $("div").show(1000,function(){
+                    
+                });
+            })
+            $("button").eq(1).click(function(){
+                $("div").hide(1000,function(){
+                    
+                });
+            })
+            $("button").eq(2).click(function(){
+                $("div").toggle(1000,function(){
+                    
+                });
+            })
+            //一般情况下 不加参数 直接显示隐藏就可以了
+        })
+      </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            // this.sing = function () {
+            //     console.log("我会唱歌");
+            // }
+        }
+        Star.prototype.sing = function () {
+            console.log("我会唱歌");
+        }
+        var ldh = new Star('刘德华', 18);
+        // 只要是对象  就有 __proto__原型  指向原型对象
+        console.log(Star.prototype);
+        console.log(Star.prototype.__proto__===Object.prototype);
+        // star原型对象里面的__proto__原型指向的是Object.prototype
+        console.log(Object.prototype.__proto__);//null
+        // 查找规则，百度
+        // 构造函数的原型对象是对象实例的对象原型，构造函数的原型对象可以用construction指了构造函数，构造函数调用，
+        // 有了一个对象实例，对象实例的对象原型 也是构造函数的原型对象，构造函数的原型对象里面的对象原型是一个对象原型，
+        // 这个对象的对象原型是null，它有一个构造函数，这个构造函数的原型对象就是构造函数原型对象的对象原型，
+        // 它用construction指向的是这个对象的对象构造函数，这个对象构造函数的原型对象是这个对象，
+        // 也就是一开始这个构造函数的原型对象的对象原型，它是没有对象原型的。
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+// less变量
+// @变量名 ：值
+// 变量命名规范
+// 必须有@为前缀
+// 不能包含特殊字符
+// 不能以数字开头
+// 大小写敏感
+// 定义一个粉色的变量
+@color: deeppink;
+
+// 错误的变量名//@1color @color~#$%% 
+// 变量名区分大小写 @color与@Color 是两个不同的变量
+
+// 不能写前面，后面可以
+// 定义为字体为14px的变量
+@font14: 14px;
+body {
+    background-color: @color;
+}
+
+div {
+    color: @color;
+    font-size: @font14;
+}
+a{
+    font-size: @font14;
+}
+// less编译 本质上 less包含一套自定义的语法及一个解析器，用户根据这些语法定义自己的样式规则
+// 这些规则最终会通过解析器 编译成对应的css文件  所以，需要把less文件，编译生成css文件，这样html页面才能用

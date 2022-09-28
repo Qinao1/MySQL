@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 扩展运算符的应用场景
+    将伪数组 或可遍历对象 转换为真正的数组   利用扩展运算符 可以将伪数组 转换成真正的数组 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        // let odivs=document.getElementsByTagName('div');
+        // odivs=[...odivs]
+        // 利用扩展运算符 将伪数组 转换为真正的数组
+        let odivs = document.querySelectorAll('div');
+        console.log(odivs);
+        let ary = [...odivs];
+        console.log(ary);
+        // 为什么将伪数组转换为真正的数组  将伪数组转换为真正的数组以后 就可以调用 数组对象下面的那些方法
+        ary.push('a');
+        console.log(ary);
+
+        // 2构造函数 Arry.from()  也可以吧把伪数组转换为真正的数组  在Array构造函数下  有一个方法叫做from
+        // from()接收一个伪数组作为参数  返回值就是转换后的结果， 是一个真正的数组
+        let arraylike = {
+            '0': 'a',
+            '1': 'b',
+            '2': 'c',
+            '3': 'd',
+            'length': 4
+        };
+        let arr2 = Array.from(arraylike);
+        //['a','b','c','d']  
+        console.log(arr2);
+        let arr4 = {
+            '0': '1',
+            '1': '2',
+            '2': '3',
+            '3': '4',
+            'length': 4
+        }
+        let arr5 = Array.from(arr4, item => item * 2);
+        // 还可以接收第二个参数  第二个参数是一个函数  它的作用是对数组中的元素，进行加个处理 
+        //  数组中有多少个元素  函数就会被调用多少次 函数有一个形参  代表当前要处理的那个值 我们只需要将处理的结果返回即可
+        console.log(arr5);
+    </script>
+</body>
+
+</html>

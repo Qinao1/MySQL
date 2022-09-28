@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 800px;
+            background-color: pink;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+        .box2 {
+            height: 60px;
+            background-color: skyblue;
+            margin-top: 20px;
+        }
+        .damao,
+        .ermao,
+        .sanmao {
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+        .damao {
+            background-color: green;
+        }
+        .ermao {
+            background-color: red;
+        }
+        .sanmao {
+            background-color: blue;
+        }
+        /* .clear {
+            clear: both;
+        } */
+        /* 这个新增的盒子必须是块级元素 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix {
+            /* IE6、7专有 */
+            *zoom: 1;
+        }
+        /* .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::before {
+            clear: both;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        } */
+    </style>
+</head>
+<div>
+    <!-- 清除浮动 -->
+    <!-- 1选择器{clear：both;},这个策略是闭合浮动，这是额外标签法 -->
+    <!-- 额外标签法也称为隔墙法,是w3c推荐的做法 -->
+    <!-- 额外标签会在浮动标签的末尾加一个空的标签例如 -->
+    <!-- div style="clear=both"</div>或者其他标签br/等 -->
+    <!-- 优点通俗易懂, -->
+    <!-- 缺点添加许多无意义的标签,结构化差 -->
+    <!-- 注意,要求这个新的空标签,必须是块级元素 -->
+    <!-- 2父级添加overflow属性 -->
+    <!-- 可以给父级元素添加overflow属性,将其属性值设为haddin,auto或scroll -->
+    <!-- 一般都是设置haddin -->
+    <!-- 子不教父之过,注意是给父元素添加代码 -->
+    <!-- 优点 代码简洁 -->
+    <!-- 缺点 无法显示溢出部分 -->
+    <!-- 3父级添加after伪元素 -->
+    <!-- .clearfix::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix {
+        /* IE6、7专有 */
+        *zoom: 1;
+    } -->
+    <!-- 优点没有增加标签，结构更简单， -->
+    <!-- 缺点照顾低版本浏览器 -->
+    <!-- 代表网站百度淘宝网易等 -->
+
+    <!-- 4父级添加双伪元素 -->
+    <!-- .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::before {
+            clear: both;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        } -->
+        <!-- 优点代码更简洁 -->
+        <!-- 缺点照顾低版本浏览器 -->
+
+    <div class="box clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+        <div class="ermao"></div>
+        <div class="ermao"></div>
+        <div class="ermao"></div>
+        <div class="ermao"></div>
+        <div class="sanmao"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

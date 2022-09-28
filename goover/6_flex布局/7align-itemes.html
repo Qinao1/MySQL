@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+            flex-direction: column;
+            /* 默认的主轴是x轴 */
+            justify-content: center;
+            /* 我们需要一个侧轴居中 */
+            align-items: center;
+            /* align-items: flex-start; */
+            /* 拉伸但是子盒子不要给               高度        */
+            /* align-items: stretch; */
+        }
+        div span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- align-items设置侧轴上的子元素排列方式（单行）
+    属性值                 说明
+    flex-start            默认值从上到下
+    flex-end              从下到上
+    center                挤在一起居中（垂直居中）
+    stretch                 拉伸 -->
+
+    <div>
+        <span>1</span><span>2</span><span>3</span>
+    </div>
+</body>
+</html>

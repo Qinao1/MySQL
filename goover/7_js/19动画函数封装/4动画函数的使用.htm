@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画函数封装到单独js文件里面</title>
+    <style>
+        .sliderbar {
+            position: fixed;
+            top: 200px;
+            right: 50px;
+        }
+
+        span {
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+
+        }
+
+        .con {
+
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 80px;
+            height: 20px;
+            background-color: purple;
+            z-index: -1;
+        }
+    </style>
+    <script src="animate.js"></script>
+</head>
+
+<body>
+    <!-- 如果以后经常使用这个动画函数1   可以单独封装到一个js文件里面，使用的时候引用这个js文件即可 -->
+    <div class="sliderbar">
+        <span>←</span>
+        <div class="con">问题反馈</div>
+    </div>
+    <script>
+        var sliderbar=document.querySelector('.sliderbar');
+        var con=document.querySelector('.con');
+        sliderbar.addEventListener('mouseenter',function(){
+            // animate(obj,target,callback);
+            con.style.display='block';
+            animate(con,-80,function(){
+                // 当动画执行完毕把左箭头改为右箭头
+                sliderbar.children[0].innerHTML='→';
+            });
+
+        })
+        sliderbar.addEventListener('mouseleave',function(){
+            // animate(obj,target,callback);
+            con.style.display='none';
+            animate(con,0,function(){
+                sliderbar.children[0].innerHTML='←';
+            });
+
+        })
+    </script>
+</body>
+
+</html>

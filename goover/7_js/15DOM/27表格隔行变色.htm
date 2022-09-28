@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        table {
+            width: 800px;
+            /* height: 100px; */
+            margin: 200px auto;
+            border-collapse: collapse;
+        }
+
+        thead th {
+            text-align: left;
+            font-weight: 400;
+
+        }
+
+        thead {
+            background-color: skyblue;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid rgba(112, 101, 112, 0.8);
+        }
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th> 代码</th>
+                <th> 名称 </th>
+                <th> 最新净值公布 </th>
+                <th> 累计净值 </th>
+                <th> 前单位净值 </th>
+                <th> 净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+            <tr>
+                <td>007898</td>
+                <td>农金后打开是</td>
+                <td>1.980</td>
+                <td>1.089</td>
+                <td>1.21212</td>
+                <td>+0.09728%</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        for (var i = 0; i < trs.length; i++) {
+            trs[i].onmouseover = function () {
+                // console.log(11);
+                this.className='bg';
+            }
+            trs[i].onmouseout=function(){
+                this.className='';
+            }
+        }
+    </script>
+</body>
+
+</html>

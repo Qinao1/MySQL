@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 定位的组成：是将盒子定在某一个位置，所以定位也是在摆放盒子，按照定位的方式移动盒子
+    定位=定位模式+边偏移
+    定位模式用于指定一个元素在文档中的定位方式，边偏移则决定了该元素的位置
+    1定位模式决定了元素的定位方式，他通过css的position属性来设置其值有4个
+    值                     语义
+    static             静态定位      是元素的默认定位方式，无定位的意思，
+    relative         相对定位         
+    absolute          绝对定位
+    fixed            固定定位
+    选择器{position：relative}
+    top：100px
+    botton
+    left
+    right
+    相对特性的特点
+    1它是相对于自己原来的位置来移动的，（移动的时候参照的是自己的位置）
+    2原来的标准流位置继续占有，后面的盒子仍然以标准流的方式度对待它（不脱标）
+    因此相对定位并没有脱标，它最典型的应用是给绝对定位当爹。。。
+    绝对定位，的特点
+    如果没有祖先元素，或者祖先元素没有定位，则以浏览器为准定位
+    2如果祖先元素有定位（相对定位，绝对定位，固定定位）则以最近一级的有定位祖先元素为参考点移动位置
+    3绝对定位不再占有原先的位置（脱标）
+    子绝对定位，父相对定位！！！！！！！！！
+    子级是绝对定位的话，父级必须要是相对定位
+    相对定位经常来作为绝对定位的父级
+    总结因为腹父级需要占有位置，因此是相对定位，子盒子不需要占用位置，则是绝对定位
+    当然子绝父相也不是绝对的，如果父元素不需要占有位置，子绝父绝也会遇到
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

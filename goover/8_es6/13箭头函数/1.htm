@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    箭头函数
+    es6新增的定义函数的方式
+    ()=>{} 小括号是用来放置形参的地方 大括号是函数体
+    如何调用 const fn=()=>{} 通过变量名字调用函数
+    <script>
+        // 箭头函数是用来简化函数定义语法
+        const dn = () => {
+            console.log(123);
+        }
+        dn();
+        // 箭头函数的特点
+        //1 在箭头函数当中 如果函数体只有一句代码 并且代码的执行结果 就是函数返回值 可以省略大括号
+        // const sun=(num1,num2)=>num1+num2
+        // const su=(n1,n2)=>{
+        //     return n1+n2;
+        // }
+        const sum = (n1, n2) => n1 + n2;
+        const result = sum(1, 2);
+        console.log(result);
+        //    2在箭头函数中 如果形参只有一个 形参外侧的小括号也可以省略的
+        // function fn(v) {
+        //     return v;
+        // }
+        const fn = v => v;
+       const n= fn(1);
+       console.log(n);
+    </script>
+
+</body>
+
+</html>

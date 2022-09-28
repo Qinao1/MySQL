@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(克隆节点)</title>
+</head>
+
+<body>
+    <ul>
+        <li>111111</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        //node.cloneNode()
+        var ul = document.querySelector('ul');
+        //node.cloneNode()  括号为空   或者flase  浅拷贝   只复制标签 不复制里面的内容
+        //node.cloneNode()  括号为true  深拷贝   复制标签 复制里面的内容
+        var lili = ul.children[0].cloneNode(true);
+        ul.appendChild(lili);
+    </script>
+</body>
+
+</html>

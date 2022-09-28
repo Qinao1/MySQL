@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .liuyan {
+            width: 500px;
+            height: 100px;
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+
+        .pinglun {
+            width: 500px;
+            height: 200px;
+            margin-left: 100px;
+        }
+
+        .pinglun ul li {
+            color: red;
+            background-color: pink;
+        }
+
+        textarea {
+            
+            resize: none;
+        }
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="liuyan">
+        <textarea name="" id="" cols="30" rows="6"></textarea>
+        <button>发布</button>
+
+    </div>
+    <div class="pinglun">
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var textarea = document.querySelector('textarea');
+        var ul = document.querySelector('ul');
+        btn.onclick = function () {
+            if (textarea.value == '') {
+                alert('你没输入内容');
+                return false;
+            } else {
+                // console.log(textarea.value);
+                // 创建元素  
+                var li = document.createElement('li');
+                // 先有li才能赋值
+                li.innerHTML = textarea.value + "<a href='javascript:;' >删除</a>";
+                // 添加元素
+                // ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
+                //删除元素 删除的是当前链接的·li 它的父亲
+                var as=document.querySelectorAll('a');
+                for (var i=0;i<as.length;i++){
+                    as[i].onclick=function(){
+                        //node.removeChild(child);//删除的是li  当前a所在的li  this.parentNode
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+        // javascript:;       阻止链接跳转
+    </script>
+</body>
+
+</html>

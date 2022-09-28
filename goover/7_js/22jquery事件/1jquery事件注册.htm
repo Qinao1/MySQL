@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        .current{
+            background-color: blue;
+        }
+    </style>
+    <script src="../20jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <ol></ol>
+    <script>
+        $(function () {
+            // 单个事件注册
+            // $("div").click(function(){
+            //     $(this).css("background","purple");
+            // })
+            // $("div").mouseenter(function(){
+            //     $(this).css("background","skyblue");
+            // })
+            // 事件处理on
+            // 可以绑定一个或多个事件的事件处理函数
+            // $("div").on({
+            //     mouseenter: function () {
+            //         $(this).css("background", "skyblue");
+            //     },
+            //     click: function () {
+            //         $(this).css("background", "purple");
+            //     },
+            //     mouseleave: function () {
+            //         $(this).css("background", "blue");
+            //     }
+            // });
+            $("div").on("mouseenter mouseleave",function(){
+                $(this).toggleClass("current");
+            })
+            // 事件委托，事件委派   定义就是把加给子元素身上的事件，绑定在父元素身上   就是把事件委派给父元素
+            // $("ul li").click()
+            $("ul").on("click","li",function(){
+                alert(11)
+            });
+            //click 绑定在ul身上的  但是触发的是小li
+            // on可以给动态创建的元素 绑定事件
+            // $("ol li").click(function(){
+            //     alert(11);
+            // })
+            $("ol").on("click","li",function(){
+                alert(11)
+            })
+            var li=$("<li>我是后来创建的</li>");
+            $("ol").append(li);
+        })
+    </script>
+</body>
+
+</html>

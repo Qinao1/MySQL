@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .row div{
+            height: 50px;
+            background-color: pink;
+        }
+        span{
+            font-size: 100px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 为了加快对移动设备友好的页面开发 利用媒体查询功能  使用工具可以方便的针对不同的鼠标展示或隐藏
+    img -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <span class="visible-lg">我会显示</span>
+            </div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3 hidden-md hidden-xs">我会变魔术</div>
+            <div class="col-xs-3">4</div>
+        </div>
+    </div>
+</body>
+
+</html>

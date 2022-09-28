@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 移动盒子位置，  定位  盒子外边距， 2d转换 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: translate(100px,100px); */
+            /* 只写x轴 */
+            transform: translate(100px,0);
+        }
+    </style>
+</head>
+<body>
+     <!-- transfrom: translate(X,y);或者分开写
+     transfrom：translateX(n)
+     transfrom：translateY（n）
+    定义2d转换的移动，沿着xy轴移动元素
+    最大优点是不会影响其他元素的位置
+    translate中的百分比单位 是相对自身元素的
+    对行内标签没有效果
+    -->
+     <div></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+            /* 默认主轴是x轴  row   x轴上排列*/
+            flex-direction: row;
+            /* justify-content:    是设置主轴上子元素的排列方式 */
+            /* 默认值，从头开始    如果主轴是x 则从左到右 */
+            /* justify-content: flex-start; */
+            /* 从右到左 */
+            /* justify-content: flex-end; */
+            /* 让子元素居中对齐 */
+            /* justify-content: center; */
+            /* 平分剩余空间 */
+            /* justify-content: space-around; */
+            /* 先两边贴边，再平分剩余空间 */
+            justify-content: space-between;
+        }
+        div span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 设置主轴上的子元素排列方式
+    justify-content 属性定义了项目在主轴上的对齐方式
+    ！！！！！！！使用这个属性之前一定要确定好主轴是哪个
+           属性值                            说明
+           flex-start            默认值   从头部开始 如果主轴是x轴   则从左到右
+           flex-end              从尾部开始排列
+           center                在主轴居中对齐（如果主轴是x轴   水平居中）
+           space-around          平分剩余空间
+           space-between         先两边贴边   再平分剩余空间 -->
+           <div><span>1</span><span>2</span><span>3</span></div>
+</body>
+</html>

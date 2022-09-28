@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opational Chaining</title>
+</head>
+<body>
+    可选链的使用场景
+    主要作用是让代码在进行null和undefined判断时，更加清洁和简洁
+    <script>
+        const info={
+            name:"why",
+            friend:{
+                name:'lilei',
+                girlfriend:'hanmmm'
+            }
+        }
+        console.log(info.friend?.girlfriend?.name);
+        // 全局对象globalThis  在浏览器里面是window，在node里面也是window
+        // for in 标准化
+    </script>
+</body>
+</html>

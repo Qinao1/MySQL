@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 给父级元素添加   flex  */
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: pink;
+            /* 默认的主轴是x轴  行row        y轴就是侧轴 */
+            /* flex-direction: row; */
+            /* 元素跟着主轴排列 */
+            /* 简单了解       这是水平翻转 */
+            /* flex-direction: row-reverse; */
+            /* 可以把主轴设置为y轴   那么x轴就成了侧轴 */
+            flex-direction: column;
+        }
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 设置主轴方向（即项目的排列方式） -->
+    <!-- 主轴和侧轴是会变化的    就看 flex-direction  设置谁为主轴  剩下的就是侧轴  子元素是跟着主轴来排列的 -->
+            <!-- 属性                     说明 -->
+            <!-- row                     默认值从左到右 -->
+            <!-- row-reverse                从右到左 -->
+            <!-- column                     从上到下 -->
+            <!-- column-reverse             从下到上 -->
+    <div><span>1</span><span>2</span><span>3</span>
+    </div>
+</body>
+</html>

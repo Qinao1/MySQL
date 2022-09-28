@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    数组的扩展方法
+    扩展运算符（展开语法） 剩余参数是将剩余的元素放在一个数组中 而扩展运算符是将数组拆分成以逗号分隔的参数序列
+    扩展运算符 可以将数组或者对象 转为以逗号分隔的参数序列
+    <script>
+        // let ary = [1, 2, 3];
+        // // ...ary //1,2,3
+        // console.log(...ary);
+        // console.log(1,2,3);
+    // 注意    console.log()方法，可以接收多个参数 多个参数以逗号分隔 表示一次输出多个内容
+    // 使用扩展运算符 将数组拆分以后  实际上就是以逗号分隔的参数序列  所以可以直接将数组的拆分结果 放在console.log中
+    // 语法上完全没有问题  接下来输出结果 1,2,3 一次被输出出来了
+    // 为什么没有逗号了
+    // 是因为逗号被当做consol.log()里面的分隔符了  所以输出结果没有逗号
+
+    // 扩展运算符 可以将数组拆分成以逗号分隔的参数序列
+    let ary=['a','b','c'];
+    //...ary  //'a','b','c'
+    console.log(...ary);
+    console.log('a','b','c');
+    </script>
+
+
+</body>
+
+</html>

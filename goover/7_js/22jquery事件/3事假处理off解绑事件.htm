@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // $("div").on({
+            //     click: function(){
+            //         console.log("我点击了");
+            //     },
+            //     mouseover:function(){
+            //         console.log("我鼠标经过了");
+            //     }
+            // });
+            // // 事件解绑
+            // // $("div").off();  //这个是解除了div身上的所有事件
+            // $("div").off("click");  //这个是解除了click身上的所有事件
+            // $("ul").on("click","li",function(){
+            //     alert(11)
+            // })
+            // $("ul").off("click","li");
+            // // one()  它只能触发事件一次
+            // $("p").one("click",function(){
+            //     alert(11)
+            // })
+
+
+
+            // 自动触发事件
+            $("div").on("click",function(){
+                alert(11)
+            });
+            // 1元素 .事件
+            // $("div").click();   会触发元素的默认行为
+            // 元素.trigger（事件）   会触发元素的默认行为
+            // $("div").trigger("click");
+            
+            // 元素.triggerHandler ('事件') 不会触发元素的默认行为 表单的光标
+            $("div").triggerHandler("click");
+
+        })
+    </script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>dasd</p>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <!-- off（）方法可以移除通过on 方法添加的事件处理程序 -->
+</body>
+</html>

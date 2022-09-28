@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    *                         重复0次或更多次
+    +                         重复一次或更多次
+    ?                        重复0次或一次
+    {n}                      重复n次   
+    {n,}                      重复n次或更多次
+    {n,m}                     重复n到m次
+    <script>
+    // 量词符
+    // 量词符 用来设定某个模式出现的次数
+    // 简单理解就是    让下面的a这个字符 重复多少次
+    // var reg=/^a$/;
+
+    // *     相当于>=0  可以出现 0 次或更多次
+    // var reg=/^a*$/;
+    // console.log(reg.test(''));
+    // console.log(reg.test('a'));
+    // console.log(reg.test('aaaa'));
+
+    // +     相当于>=1  可以重复一次或更多次
+    // var reg=/^a+$/;
+    // console.log(reg.test('')); //false
+    // console.log(reg.test('a'));
+    // console.log(reg.test('aaaa'));
+
+    // ?     相当于1||0              重复0次或一次
+    // var reg=/^a?$/;
+    // console.log(reg.test(''));//true
+    // console.log(reg.test('a'));//true
+    // console.log(reg.test('aaaa'));//false
+
+    // {3}   就是重复3次
+    // var reg=/^a{3}$/;
+    // console.log(reg.test(''));//false
+    // console.log(reg.test('a'));//false
+    // console.log(reg.test('aaaa'));//false
+    // console.log(reg.test('aaa'));//true
+
+    // {3,}  相当于>=3        重复n次或更多次
+    // var reg=/^a{3,}$/;
+    // console.log(reg.test(''));//false
+    // console.log(reg.test('a'));//false
+    // console.log(reg.test('aaaa'));//true
+    // console.log(reg.test('aaa'));//true
+
+    // {3,16} 相当于大于等于3小于等于16  重复n到m次
+    var reg=/^a{3,6}$/;
+    console.log(reg.test(''));//false
+    console.log(reg.test('a'));//false
+    console.log(reg.test('aaaa'));//true
+    console.log(reg.test('aaa'));//true
+    console.log(reg.test('aaaaaaaa'));//false
+</script>
+  
+</body>
+</html>

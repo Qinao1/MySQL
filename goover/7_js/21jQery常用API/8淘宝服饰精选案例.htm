@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-collapse:collapse;
+        }
+        .huan {
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 100px auto;
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .huan #left{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            height: 100%;
+        }
+        .huan ul li img {
+            width: 200px;
+            height: 100%;
+            border: 1px solid pink;
+            overflow: hidden;
+        }
+        .huan ul li {
+            border: 1px solid pink;
+        }
+    </style>
+    <script>
+        $(function(){
+            //1鼠标经过左侧的小li
+            $("#left li").mousemove(function(){
+                //2得到当前小li的索引号
+                var index=$(this).index();
+                console.log(index);
+                // 3让右侧的盒子相应索引号图片显示出来
+                // $(".right li").eq(index).show();
+                // 4其余的图片隐藏 就是其他的兄弟
+                // $(".right li").eq(index).siblings().hide();
+                // 链式
+                $(".right li").eq(index).show().siblings().hide();
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="huan">
+        <ul id="left">
+            <li><a href="">被子</a></li>
+            <li><a href="">的空间三</a></li>
+            <li><a href="">女定位到</a></li>
+            <li><a href="">的阿萨</a></li>
+            <li><a href="">女热任务</a></li>
+            <li><a href="">大萨达女</a></li>
+            <li><a href="">女我</a></li>
+        </ul>
+        <ul class="right">
+            <li><img src="../01.jpg" alt=""></li>
+            <li><img src="../02.jpg" alt=""></li>
+            <li><img src="../03.jpg" alt=""></li>
+            <li><img src="../04.jpg" alt=""></li>
+            <li><img src="../05.jpg" alt=""></li>
+            <li><img src="../06.jpg" alt=""></li>
+            <li><img src="../07.jpg" alt=""></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

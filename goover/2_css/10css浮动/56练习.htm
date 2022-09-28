@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .top {
+            height: 50px;
+            background-color: gray;
+        }
+        .banner {
+            height: 150px;
+            width: 980px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        .box {
+            height: 600px;
+            width: 980px;
+            background-color: red;
+            margin: 0 auto;
+        }
+        /* 只要是通栏的盒子，（和浏览器一样宽）不需要设置宽度 */
+        .footer {
+            height: 50px;
+            background-color: green;
+        }
+        .box li {
+            height: 590px;
+            width: 237.5px;
+            background-color: skyblue;
+            margin-right: 10px;
+            float: left;
+        }
+        .box .last {
+            margin-right: 0;
+        }
+        .banner,
+        .box,
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">top</div>
+    <div class="banner">baner</div>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+    <!-- 先用父元素排列上下顺序，再用浮动排列左右顺序 -->
+    <!-- 一个元素浮动了，理论上其余兄弟元素，也要浮动，以防引起问题，，一浮全浮 -->
+    <!-- 浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流 -->
+</body>
+</html>

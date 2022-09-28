@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../20jQuery/jquery.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(document).on("click",function(){
+                console.log("点击了document");
+            }
+            )
+            $("div").on("click",function(e){
+                // console.log(e);
+                console.log("点击了div");
+                event.preventDefault();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    <!-- 阻止默认行为  event.preventDefault()或者return false 也可以阻止冒泡  具体参考webapi
+    阻止事件冒泡   event.stopPropagation() -->
+    <!-- 事件被触发  就会有事件对象的产生 -->
+</body>
+</html>

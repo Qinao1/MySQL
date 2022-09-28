@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用函数求任意两个数的最大值
+        function getMax(num1, num2) {
+            // if (num1 > num2) {
+            //     return num1;
+            // } else {
+            //     return num2;
+            // }
+            return num1 > num2 ? num1 : num2;
+        }
+        console.log(getMax(1, 4));
+        console.log(getMax(11, 4));
+        //利用函数求任意一个数组中的最大值
+        function getArrMax(arr) {
+            var max = arr[0]
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max;
+        }
+        // getArrMax([5,2,99,101,66,77]);//实参是一个数组送过去
+        //在实际开发里面，我们经常用一个变量来接收，函数的返回结果 使用更简单
+        var re = getArrMax([5, 2, 99, 101, 66, 77]);
+        console.log(re);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 复合选择器会有权重叠加的问题 */
+        /* 权重虽然会叠加，但是永远不会有进位的问题 */
+        li {
+            color: red;
+        }
+        /* li的权重是0，0，0，1 */
+        /* ul li 权重是0,0,0,1加上0,0,0,1=0,0,0,2 */
+        ul li {
+            color: pink;
+        }
+        /* .nav li 权重是0，0,1,0+0,0,0,1=0,0,1,1 */
+        .nav li {
+            color: skyblue
+        }
+        /* 指定的越明确，（选择器的范围越小）权重越高 */
+    </style>
+</head>
+<body>
+    <!-- 如果是复合选择器，则会有权重叠加，需要计算权重！！！！！！！！ -->
+    <ul class="nav">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
